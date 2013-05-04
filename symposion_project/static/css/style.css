@@ -5981,18 +5981,18 @@ h3, legend {
 #social li a:hover {
   opacity: 1;
 }
-#info {
-  background: transparent url('../img/body-pattern.jpg') left 29px repeat-x;
+#dusk {
+  background: transparent url('../img/body-pattern.jpg') left bottom repeat-x;
 }
-#info > .row-fluid {
+#dusk > .row-fluid {
   margin: 0 auto;
 }
-#info > .row-fluid:first-child {
+#dusk > .row-fluid:first-child {
   max-width: 960px;
 }
-#buy {
-  background: transparent url('../img/cn-tower.png') left top no-repeat;
-  height: 290px;
+#skyline {
+  background: transparent url('../img/cn-tower.png') left bottom no-repeat;
+  min-height: 290px;
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
