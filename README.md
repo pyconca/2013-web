@@ -77,5 +77,7 @@ To build documentation::
     $ ssh pycon.ca
     $ cd /data/web/2013.pycon.ca/pyconca
     $ . /data/virtualenvs/2013.pycon.ca/bin/activate
-    $ git pull # Note the hash, I usually push a deploy tag from my local repo pointed at this hash
+    $ git pull --ff-only # Note the hash, I usually push a deploy tag from my local repo pointed at this hash
+    $ # => IF IT REFUSES TO FAST-FORWARD, SOMEONE HAS COMMITTED THINGS TO PROD WITHOUT GOING THROUGH GITHUB
+    $ #    Figure out why before you continue!
     $ make restart_prod
