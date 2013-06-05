@@ -41,5 +41,6 @@
 </p>
 
 <h2 id="codeofconduct">{% trans "Code of Conduct" %}</h2>
-<p>{% trans "ABOUT_CONDUCT" %}</p>
+{% url conduct as conduct_url %}
+{% blocktrans with conduct_url=conduct_url %}<p>The PyCon Canada organizing team is committed to creating a safe and welcoming environment for all attendees; all of our volunteers and staff are trained to handle conduct violations swiftly and tactfully.</p><p>Please familiarize yourself with the <a href="{{ conduct_url }}">Code of Conduct</a> before the conference, and if you witness or experience a code of conduct violation at PyCon Canada 2013, <em>let one of our organizers know right away</em>. We will immediately take whatever steps are necessary to address the situation.</p>{% endblocktrans %}
 {% endblock %}

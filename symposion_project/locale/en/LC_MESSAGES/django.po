@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-28 19:04-0400\n"
+"POT-Creation-Date: 2013-06-04 22:22-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -200,12 +200,18 @@ msgstr ""
 msgid "Code of Conduct"
 msgstr ""
 
-#: templates/about.html:44
-msgid "ABOUT_CONDUCT"
+#: templates/about.html:45
+#, python-format
+msgid ""
+"<p>The PyCon Canada organizing team is committed to creating a safe and "
+"welcoming environment for all attendees; all of our volunteers and staff are "
+"trained to handle conduct violations swiftly and tactfully.</p><p>Please "
+"familiarize yourself with the <a href=\"%(conduct_url)s\">Code of Conduct</"
+"a> before the conference, and if you witness or experience a code of conduct "
+"violation at PyCon Canada 2013, <em>let one of our organizers know right "
+"away</em>. We will immediately take whatever steps are necessary to address "
+"the situation.</p>"
 msgstr ""
-"Please familiarize yourself with the <a href='/conduct'>Code of Conduct</a> "
-"and do your part to make sure PyCon Canada doesn't end up on Hacker News for "
-"all the wrong reasons. "
 
 #: templates/conduct.html:16
 msgid "CONDUCT_OVERVIEW"
