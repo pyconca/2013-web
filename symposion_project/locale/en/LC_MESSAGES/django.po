@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-04 23:28-0400\n"
+"POT-Creation-Date: 2013-06-08 19:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,11 +168,19 @@ msgstr ""
 "PyCon Canada is entirely run by volunteers who are passionate about these "
 "goals. We hope to see you at the 2012 conference! "
 
-#: templates/about.html:30
+#: templates/about.html:31
+#, python-format
+msgid ""
+"We're also proud to host <a href=\"%(sprints_url)s\">development sprints</a> "
+"which provide a gateway for new contributors and a way for you to give back "
+"to the open-source community."
+msgstr ""
+
+#: templates/about.html:33
 msgid "Diversity Grants"
 msgstr ""
 
-#: templates/about.html:32
+#: templates/about.html:35
 msgid ""
 "We want to bring together a range of great people and ideas, so Pythonistas "
 "from Canada and beyond are welcome to attend and speak. PyCon Canada is "
@@ -183,24 +191,24 @@ msgid ""
 "for a grant is July 1, 2013."
 msgstr ""
 
-#: templates/about.html:36
+#: templates/about.html:39
 msgid ""
 "Please use the <a href=\"https://docs.google.com/a/pycon.ca/forms/"
 "d/1LZ6oaBQLlA0hOKuPwSIHEgGo1yfF092l_cBU9HVWOU4/viewform\">online form</a> to "
 "submit an application for a diversity grant."
 msgstr ""
 
-#: templates/about.html:40
+#: templates/about.html:43
 msgid ""
 "If you'd like to speak at PyCon Canada, submissions are due June 21, 2013."
 msgstr ""
 
-#: templates/about.html:43 templates/conduct.html:6
+#: templates/about.html:46 templates/conduct.html:6
 #: templates/conduct.html.py:9 templates/conduct.html:15
 msgid "Code of Conduct"
 msgstr ""
 
-#: templates/about.html:45
+#: templates/about.html:48
 #, python-format
 msgid ""
 "<p>The PyCon Canada organizing team is committed to creating a safe and "
@@ -546,6 +554,72 @@ msgstr ""
 "discuss a custom package, please contact <a href=\"mailto:sponsorship@pycon."
 "ca\">sponsorship@pycon.ca</a>."
 
+#: templates/sprints.html:5
+msgid "Sprints"
+msgstr ""
+
+#: templates/sprints.html:7
+msgid "Contribute to open-source, face-to-face with other developers!"
+msgstr ""
+
+#: templates/sprints.html:11
+msgid "Development Sprints"
+msgstr ""
+
+#: templates/sprints.html:12
+msgid "Monday, August 12th and Tuesday, August 13th, 2012."
+msgstr ""
+
+#: templates/sprints.html:14 templates/schedule/schedule_conference.html:28
+msgid "SPRINT_WHAT"
+msgstr ""
+"<p>PyCon Development Sprints are two days of intensive learning and "
+"development on an open source project of your choice, in a team environment. "
+"It's a time to come together with colleagues, old and new, to share what "
+"you've learned and apply it to an open source project.</p><p>In the crucible "
+"of a sprint room, teaming with both focus and humor, it's a time to test, "
+"fix bugs, add new features, and improve documentation. And it's a time to "
+"network, make friends, and build relationships that go beyond the conference."
+"</p><p>PyCon provides the space and infrastructure (network, power, tables & "
+"chairs); you bring your skills, humanity, and brainpower (oh! and don't "
+"forget your computer).</p>"
+
+#: templates/sprints.html:18
+msgid ""
+"The sprints will be held at the conference venue, in the Terrace room (3rd "
+"floor). Show up any time, and leave any time&mdash;it's up to you!"
+msgstr ""
+
+#: templates/sprints.html:20
+msgid "Who can participate?"
+msgstr ""
+
+#: templates/sprints.html:21
+msgid "You!"
+msgstr ""
+
+#: templates/sprints.html:23
+msgid ""
+"All experience levels are welcome; sprints are a great opportunity to get "
+"connected with, and start contributing to your favorite Python project. Many "
+"people have made their <em>first</em> open-source contribution at sprints."
+msgstr ""
+
+#: templates/sprints.html:25
+msgid "Participation in the sprints is free!"
+msgstr ""
+
+#: templates/sprints.html:27
+msgid "What's there to sprint on?"
+msgstr ""
+
+#: templates/sprints.html:29
+msgid ""
+"Not sure what to sprint on? Want to advertise your project? Head over to the "
+"<a href=\"https://github.com/pyconca/2013-wiki/wiki/Sprints\">sprint wiki</"
+"a> to see (and add to) the list of projects which will have people sprinting."
+msgstr ""
+
 #: templates/venue.html:7
 msgid ""
 "The conference will be held at the Chestnut Conference Centre in the heart "
@@ -747,24 +821,16 @@ msgid "Conference Schedule"
 msgstr "August 9-13, 2013"
 
 #: templates/schedule/schedule_conference.html:26
-msgid "SPRINT_WHAT"
+#: templates/schedule/schedule_conference.html:30
+#, python-format
+msgid "<a href=\"%(sprints_url)s\">Development Sprints</a>"
 msgstr ""
-"PyCon Development Sprints are two days of intensive learning and development "
-"on an open source project of your choice, in a team environment. It's a time "
-"to come together with colleagues, old and new, to share what you've learned "
-"and apply it to an open source project.<br><br>In the crucible of a sprint "
-"room, teaming with both focus and humor, it's a time to test, fix bugs, add "
-"new features, and improve documentation. And it's a time to network, make "
-"friends, and build relationships that go beyond the conference.<br><br>PyCon "
-"provides the space and infrastructure (network, power, tables & chairs); you "
-"bring your skills, humanity, and brainpower (oh! and don't forget your "
-"computer)."
 
-#: templates/schedule/schedule_conference.html:33
+#: templates/schedule/schedule_conference.html:36
 msgid "Toronto PyCamp"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:34
+#: templates/schedule/schedule_conference.html:37
 msgid ""
 "<p><a href=\"http://pycamp.org/boot-camp/torpy13/\">Toronto PyCamp</a>: "
 "Monday through Friday, August 12-16, 2013</p><p>PyCamp teams with the second "

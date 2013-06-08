@@ -22,10 +22,12 @@
   <h2>Sunday August 11</h2>
   <p>Keynotes, talks, tutorials, and lunch.</p>
   <h2>Monday August 12</h2>
-  <p>Development Sprints</p>
-  <p>{% trans "SPRINT_WHAT" %}</p>
+  {% url sprints as sprints_url %}
+  <p>{% blocktrans with sprints_url=sprints_url %}<a href="{{ sprints_url }}">Development Sprints</a>{% endblocktrans %}</p>
+
+  {% trans "SPRINT_WHAT" %}
   <h2>Tuesday August 13</h2>
-  <p>Development Sprints</p>
+  <p>{% blocktrans with sprints_url=sprints_url %}<a href="{{ sprints_url }}">Development Sprints</a>{% endblocktrans %}</p>
 
     <div id="details" class="row-fluid">
       <div class="span12">

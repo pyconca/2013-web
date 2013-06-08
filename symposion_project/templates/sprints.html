@@ -1,0 +1,31 @@
+{% extends "content_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sprints" %}{% endblock %}
+{% block excerpt %}
+<h3>{% trans "Contribute to open-source, face-to-face with other developers!" %}</h3>
+{% endblock %}
+
+{% block body %}
+<h3>{% trans "Development Sprints" %}</h3>
+<p>{% blocktrans %}Monday, August 12th and Tuesday, August 13th, 2012.{% endblocktrans %}</p>
+
+{% trans "SPRINT_WHAT" %}
+
+<h3>What's the schedule?</h3>
+
+<p>{% blocktrans %}The sprints will be held at the conference venue, in the Terrace room (3rd floor). Show up any time, and leave any time&mdash;it's up to you!{% endblocktrans %}</p>
+
+<h3>{% trans "Who can participate?" %}</h3>
+<p>{% trans "You!" %}</p>
+
+<p>{% blocktrans %}All experience levels are welcome; sprints are a great opportunity to get connected with, and start contributing to your favorite Python project. Many people have made their <em>first</em> open-source contribution at sprints.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}Participation in the sprints is free!{% endblocktrans %}</p>
+
+<h3>{% trans "What's there to sprint on?" %}</h3>
+
+<p>{% blocktrans %}Not sure what to sprint on? Want to advertise your project? Head over to the <a href="https://github.com/pyconca/2013-wiki/wiki/Sprints">sprint wiki</a> to see (and add to) the list of projects which will have people sprinting.{% endblocktrans %}</p>
+
+{% endblock %}
