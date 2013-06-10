@@ -39,6 +39,10 @@ urlpatterns += i18n_patterns("",
         "template": "speak.html",
     }, name="speak"),
 
+    url(r"^sprints/", direct_to_template, {
+        "template": "sprints.html",
+    }, name="sprints"),
+
     url(r"^learn/", direct_to_template, {
         "template": "learn.html",
     }, name="learn"),
