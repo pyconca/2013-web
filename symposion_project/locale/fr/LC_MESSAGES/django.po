@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-08 19:56-0400\n"
+"POT-Creation-Date: 2013-06-10 09:46-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -609,6 +609,10 @@ msgstr ""
 "vos compétences, l'humanité, et l'intelligence (oh, n'oubliez pas votre "
 "ordinateur).</p>"
 
+#: templates/sprints.html:16
+msgid "What's the schedule?"
+msgstr ""
+
 #: templates/sprints.html:18
 msgid ""
 "The sprints will be held at the conference venue, in the Terrace room (3rd "
@@ -635,10 +639,23 @@ msgid "Participation in the sprints is free!"
 msgstr ""
 
 #: templates/sprints.html:27
-msgid "What's there to sprint on?"
+msgid "How do I sign up?"
 msgstr ""
 
 #: templates/sprints.html:29
+msgid ""
+"It's easy&mdash;just head over to the <a href=\"https://github.com/"
+"pyconca/2013-wiki/wiki/Sprints\">sprint wiki</a> and write your name under "
+"the project you're interested in. If you just want to attend sprints in "
+"general, there's a section for that too! There will be people on hand to "
+"help you find something to work on."
+msgstr ""
+
+#: templates/sprints.html:31
+msgid "What's there to sprint on?"
+msgstr ""
+
+#: templates/sprints.html:33
 msgid ""
 "Not sure what to sprint on? Want to advertise your project? Head over to the "
 "<a href=\"https://github.com/pyconca/2013-wiki/wiki/Sprints\">sprint wiki</"
