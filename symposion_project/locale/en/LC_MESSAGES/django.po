@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-14 09:51-0400\n"
+"POT-Creation-Date: 2013-06-14 09:55-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -193,22 +193,30 @@ msgstr ""
 
 #: templates/about.html:39
 msgid ""
+"We are also encouraging submissions from groups of applicants who wish to "
+"apply together. If you'd love to come to PyCon Canada 2013 but can't see "
+"yourself attending without your friends, this a great way to make that "
+"happen!"
+msgstr ""
+
+#: templates/about.html:43
+msgid ""
 "Please use the <a href=\"https://docs.google.com/a/pycon.ca/forms/"
 "d/1LZ6oaBQLlA0hOKuPwSIHEgGo1yfF092l_cBU9HVWOU4/viewform\">online form</a> to "
 "submit an application for a diversity grant."
 msgstr ""
 
-#: templates/about.html:43
+#: templates/about.html:47
 msgid ""
 "If you'd like to speak at PyCon Canada, submissions are due June 21, 2013."
 msgstr ""
 
-#: templates/about.html:46 templates/conduct.html:6
+#: templates/about.html:50 templates/conduct.html:6
 #: templates/conduct.html.py:9 templates/conduct.html:15
 msgid "Code of Conduct"
 msgstr ""
 
-#: templates/about.html:48
+#: templates/about.html:52
 #, python-format
 msgid ""
 "<p>The PyCon Canada organizing team is committed to creating a safe and "
