@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-10 12:09-0400\n"
+"POT-Creation-Date: 2013-06-14 09:51-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -802,6 +802,19 @@ msgstr ""
 "Contactez-nous si vous avez des problèmes avec la réservation d'une  chambre "
 "à : <a href=\"mailto:organizers@pycon.ca?subject=I%%20need%%20help%%20finding"
 "%%20a%%20room!\">organizers@pycon.ca</a>."
+
+#: templates/venue.html:56
+msgid "What to do in Toronto"
+msgstr ""
+
+#: templates/venue.html:57
+msgid ""
+"<a href=\"http://www.mytorontomeeting.com/\">Tourism Toronto's website</a> "
+"has information on things to see and do in Toronto, as well as a \"Deals\" "
+"section including coupons. They also have a <a href=\"http://www."
+"mytorontomeeting.com/Visitor/see-toronto-mobile-app.aspx\">mobile app</a> "
+"available for download."
+msgstr ""
 
 #: templates/account/login.html:11
 msgid "Log in to an existing account"
