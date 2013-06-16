@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-14 09:55-0400\n"
+"POT-Creation-Date: 2013-06-16 08:28-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -711,10 +711,58 @@ msgstr ""
 "Washington. "
 
 #: templates/venue.html:29
+msgid ""
+"<a href=\"https://www.viarail.ca/\">VIA Rail</a> is offering discounts on "
+"train fares for attendees."
+msgstr ""
+
+#: templates/venue.html:31
+msgid ""
+"Valid for travel between Thursday August 8 and Friday August 16, 2013, from "
+"all stations throughout the VIA system to Toronto, Ontario and return."
+msgstr ""
+
+#: templates/venue.html:32
+msgid ""
+"Fare applies to a maximum of two passengers per booking. One complimentary "
+"stopover is allowed at no additional charge. For travel on all fare plans in "
+"Business class, the first stopover is allowed at no additional charge, "
+"provided that this stopover takes place in Toronto, Montéal, or Ottawa only."
+msgstr ""
+
+#: templates/venue.html:33
+#, python-format
+msgid ""
+"The discount is 10%% off the best available fare in Economy, Business, "
+"Sleeper, or Sleeper Touring class. \"Subject to the conditions and "
+"restrictions of the fare plan to which the additional discount is being "
+"applied.\""
+msgstr ""
+
+#: templates/venue.html:34
+msgid ""
+"Discount does not apply in \"Economy&ndash;special\" or escape fare and in "
+"\"Business&ndash;supersaver\" fee."
+msgstr ""
+
+#: templates/venue.html:35
+msgid "Reference VIA convention code 12614."
+msgstr ""
+
+#: templates/venue.html:36
+msgid ""
+"Online booking tips:<ul><li>You have to log in to your profile, or create "
+"one prior to booking.</li><li>On the Passenger information screen, select "
+"\"Convention fare\" from the \"Discount Type\" drop-down menu, and enter the "
+"discount code for your convention or event in the \"Discount code\" field.</"
+"li><li>The conference fare will be shown on the next page.</li></ul>"
+msgstr ""
+
+#: templates/venue.html:39
 msgid "Public Transit and Parking"
 msgstr ""
 
-#: templates/venue.html:30
+#: templates/venue.html:40
 msgid "VENUE_PUBLIC_TRANSIT"
 msgstr ""
 "The nearest <a href=\"http://ttc.ca/\">TTC</a> subway stop is St. Patrick "
@@ -722,35 +770,35 @@ msgstr ""
 "at Chestnut Street. Cash fare is $3, or tokens can be purchased at "
 "discounted rates."
 
-#: templates/venue.html:31
+#: templates/venue.html:41
 msgid "VENUE_PARKING"
 msgstr "Parking details TBA."
 
-#: templates/venue.html:33
+#: templates/venue.html:43
 msgid "Food"
 msgstr ""
 
-#: templates/venue.html:34
+#: templates/venue.html:44
 msgid "VENUE_FOOD"
 msgstr "TBA"
 
-#: templates/venue.html:36
+#: templates/venue.html:46
 msgid "Hotel"
 msgstr ""
 
-#: templates/venue.html:37
+#: templates/venue.html:47
 msgid ""
 "The recommended hotel for PyCon Canada is the conference venue, the Chestnut "
 "Residence"
 msgstr ""
 
-#: templates/venue.html:46
+#: templates/venue.html:56
 msgid "HOTEL_RESERVATION_PHONE"
 msgstr ""
 "To make a reservation over the phone, please call 416-977-0707 between the "
 "hours of 9am and 7pm Eastern time and mention code &ldquo;1308PYCONCA&rdquo;."
 
-#: templates/venue.html:48
+#: templates/venue.html:58
 msgid "HOTEL_RESERVATION_WEB"
 msgstr ""
 "To make a reservation on the web head to the <a href=\"https://"
@@ -759,31 +807,31 @@ msgstr ""
 "&ldquo;1308PYCONCA&rdquo;. Follow the reservation process by creating a new "
 "account. The cut off date for the group rate is July 9, 2013."
 
-#: templates/venue.html:50
+#: templates/venue.html:60
 msgid "HOTEL_RESERVATION_CONTACT"
 msgstr ""
 "You can also contact the residence by emailing <a href=\"mailto:frontdesk."
 "chestnut@utoronto.ca\">frontdesk.chestnut@utoronto.ca</a>."
 
-#: templates/venue.html:52
+#: templates/venue.html:62
 msgid "HOTEL_ROOM_SHARING"
 msgstr ""
 "If you would like to share a hotel room with someone else attending the "
 "conference, please see the PyCon Canada <a href=\"https://github.com/"
 "pyconca/2013-wiki/wiki/Room-Sharing\">room sharing wiki</a> page."
 
-#: templates/venue.html:54
+#: templates/venue.html:64
 msgid "HOTEL_TROUBLE"
 msgstr ""
 "Email <a href=\"mailto:organizers@pycon.ca?subject=I%%20need%%20help%"
 "%20finding%%20a%%20room!\">organizers@pycon.ca</a> if you run into any "
 "trouble reserving your room, or finding someone to share a room with."
 
-#: templates/venue.html:56
+#: templates/venue.html:66
 msgid "What to do in Toronto"
 msgstr ""
 
-#: templates/venue.html:57
+#: templates/venue.html:67
 msgid ""
 "<a href=\"http://www.mytorontomeeting.com/\">Tourism Toronto's website</a> "
 "has information on things to see and do in Toronto, as well as a \"Deals\" "
