@@ -741,7 +741,7 @@ msgstr ""
 #: templates/venue.html:29
 msgid ""
 "<a href=\"https://www.viarail.ca/\">VIA Rail</a> is offering discounts on "
-"train fares for attendees."
+"train fares for attendees:"
 msgstr ""
 
 #: templates/venue.html:31
@@ -781,9 +781,9 @@ msgstr ""
 msgid ""
 "Online booking tips:<ul><li>You have to log in to your profile, or create "
 "one prior to booking.</li><li>On the Passenger information screen, select "
-"\"Convention fare\" from the \"Discount Type\" drop-down menu, and enter the "
-"discount code for your convention or event in the \"Discount code\" field.</"
-"li><li>The conference fare will be shown on the next page.</li></ul>"
+"\"Convention fare\" from the \"Discount Type\" drop-down menu, and enter "
+"discount code 12614 in the \"Discount code\" field.</li><li>The conference "
+"fare will be shown on the next page.</li></ul>"
 msgstr ""
 
 #: templates/venue.html:39
