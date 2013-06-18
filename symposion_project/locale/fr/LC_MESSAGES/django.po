@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-16 20:59-0400\n"
+"POT-Creation-Date: 2013-06-17 21:22-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -342,6 +342,54 @@ msgstr ""
 msgid "We are also online at:"
 msgstr "Nous sommes aussi en ligne sur:"
 
+#: templates/contact.html:29
+msgid "Staff &amp; Volunteers"
+msgstr ""
+
+#: templates/contact.html:32
+msgid "Name"
+msgstr "Nom"
+
+#: templates/contact.html:32
+msgid "Role"
+msgstr "Rôle"
+
+#: templates/contact.html:35
+msgid "Conference Chair"
+msgstr ""
+
+#: templates/contact.html:36
+msgid "BCFL"
+msgstr ""
+
+#: templates/contact.html:37 templates/contact.html.py:38
+msgid "Board Member"
+msgstr ""
+
+#: templates/contact.html:39
+msgid "Web Tech"
+msgstr ""
+
+#: templates/contact.html:40
+msgid "Sponsorship"
+msgstr ""
+
+#: templates/contact.html:41 templates/contact.html.py:42
+msgid "Logistics"
+msgstr ""
+
+#: templates/contact.html:43
+msgid "Generalist"
+msgstr ""
+
+#: templates/contact.html:44
+msgid "Speaker Suggester"
+msgstr ""
+
+#: templates/contact.html:45
+msgid "Your name here!"
+msgstr "Votre nom ici!"
+
 #: templates/homepage.html:9
 msgid "Welcome"
 msgstr "Bienvenue"
@@ -413,7 +461,6 @@ msgstr ""
 "aucourant des nouvelles pour PyCon Montréal"
 
 #: templates/homepage.html:71
-#, fuzzy
 msgid "Our Sponsors"
 msgstr "Nos commanditaires"
 

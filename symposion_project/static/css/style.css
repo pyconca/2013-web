@@ -6297,3 +6297,8 @@ form label {
 .controls textarea {
     width: 100%;
 }
+table.staff th, table.staff td {
+    width: 40%;
+    border: 1px solid white;
+    padding: 0.25em;
+}
