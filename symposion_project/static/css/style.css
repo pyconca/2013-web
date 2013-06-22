@@ -5938,10 +5938,10 @@ h4, legend {
   overflow: auto;
   margin: 10px 0;
 }
-.nav li.home {
+.nav.site-base li.home {
   width: 50px;
 }
-.nav li {
+.nav.site-base li {
   float: left;
   width: 13%;
   text-align: center;
@@ -5949,7 +5949,7 @@ h4, legend {
   height: 45px;
 }
 @media (max-width: 767px) {
-  .nav li {
+  .nav.site-base li {
     width: auto;
     min-width: 0px;
     margin-left: 5px;
