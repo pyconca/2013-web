@@ -62,9 +62,6 @@ class ReviewAssignment(models.Model):
     
     @classmethod
     def create_assignments(cls, proposal, origin=AUTO_ASSIGNED_INITIAL):
-        # TODO : This should probably shuffle the list of reviewers before the
-        # num_assignments sort, so that "gangs" of reviewers don't get assigned
-        # to proposals.
         speakers = [proposal.speaker] + list(proposal.additional_speakers.all())
         reviewers = User.objects.exclude(
             pk__in=[
@@ -82,7 +79,7 @@ class ReviewAssignment(models.Model):
         ).annotate(
             num_assignments=models.Count("reviewassignment")
         ).order_by(
-            "num_assignments",
+            "num_assignments", "?",
         )
         num_assigned_reviewers = ReviewAssignment.objects.filter(
             proposal_id=proposal.id, opted_out=0).count()
