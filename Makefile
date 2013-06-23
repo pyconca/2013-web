@@ -44,5 +44,6 @@ run: hacking/dev.db
 	./manage.py runserver 127.0.0.1:6544
 
 restart_prod:
+	pip install -r requirements.txt
 	./manage.py collectstatic --noinput
 	sudo supervisorctl restart gunicorn-2013.pycon.ca
