@@ -29,4 +29,4 @@ django-sitetree==0.9.1
 PIL==1.1.7
 easy-thumbnails==1.1
 
-django-switchuser==0.0.5
+django-switchuser==0.0.6
