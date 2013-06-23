@@ -259,6 +259,8 @@ def review_detail(request, pk):
     
     reviews = Review.objects.filter(proposal=proposal).order_by("-submitted_at")
     messages = proposal.messages.order_by("submitted_at")
+    section_slug = proposal.section.slug
+    is_manager  = request.user.has_perm("reviews.can_manage_%s" % section_slug)
     
     return render(request, "reviews/review_detail.html", {
         "proposal": proposal,
@@ -266,7 +268,8 @@ def review_detail(request, pk):
         "reviews": reviews,
         "review_messages": messages,
         "review_form": review_form,
-        "message_form": message_form
+        "message_form": message_form,
+        "is_manager": is_manager,
     })
 
 
@@ -274,7 +277,7 @@ def review_detail(request, pk):
 @require_POST
 def review_delete(request, pk):
     review = get_object_or_404(Review, pk=pk)
-    section_slug = review.section.slug
+    section_slug = review.section
     
     if not request.user.has_perm("reviews.can_manage_%s" % section_slug):
         return access_not_permitted(request)
