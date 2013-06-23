@@ -13,6 +13,7 @@
                 <tr>
                     <td>
                         <a href="{% url review_detail assignment.proposal.pk %}">
+                            {{ assignment.proposal.kind.name }}:
                             {{ assignment.proposal.title }}
                         </a>
                     </td>

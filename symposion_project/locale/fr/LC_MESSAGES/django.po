@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-17 21:22-0400\n"
+"POT-Creation-Date: 2013-06-23 02:26-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -346,49 +346,16 @@ msgstr "Nous sommes aussi en ligne sur:"
 msgid "Staff &amp; Volunteers"
 msgstr ""
 
-#: templates/contact.html:32
-msgid "Name"
-msgstr "Nom"
-
-#: templates/contact.html:32
-msgid "Role"
-msgstr "Rôle"
-
-#: templates/contact.html:35
-msgid "Conference Chair"
-msgstr ""
-
-#: templates/contact.html:36
-msgid "BCFL"
-msgstr ""
-
-#: templates/contact.html:37 templates/contact.html.py:38
-msgid "Board Member"
-msgstr ""
-
-#: templates/contact.html:39
-msgid "Web Tech"
-msgstr ""
-
-#: templates/contact.html:40
-msgid "Sponsorship"
-msgstr ""
-
-#: templates/contact.html:41 templates/contact.html.py:42
-msgid "Logistics"
-msgstr ""
-
-#: templates/contact.html:43
-msgid "Generalist"
-msgstr ""
-
-#: templates/contact.html:44
-msgid "Speaker Suggester"
-msgstr ""
-
-#: templates/contact.html:45
+#: templates/contact.html:41
 msgid "Your name here!"
 msgstr "Votre nom ici!"
+
+#: templates/contact.html:43
+msgid ""
+"If you think you should be listed here, email <a href=\"mailto:board@pycon.ca"
+"\">board@pycon.ca</a> and/or send a <a href=\"https://github.com/"
+"pyconca/2013-web\">pull request</a>."
+msgstr ""
 
 #: templates/homepage.html:9
 msgid "Welcome"
@@ -1012,3 +979,9 @@ msgid ""
 "weekend to see the amazing things Python can do for you, then experience a "
 "week of PyCamp.</p>"
 msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Role"
+#~ msgstr "Rôle"

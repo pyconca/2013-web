@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-22 22:49-0400\n"
+"POT-Creation-Date: 2013-06-23 02:57-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -310,15 +310,19 @@ msgstr "Conférencier / Titre"
 msgid "Your Vote"
 msgstr "Votre score"
 
-#: templates/dashboard.html:163
+#: templates/dashboard.html:133
+msgid "My Assignments"
+msgstr ""
+
+#: templates/dashboard.html:144
 msgid "Teams"
 msgstr "Équipes"
 
-#: templates/dashboard.html:168
+#: templates/dashboard.html:149
 msgid "Your Teams"
 msgstr ""
 
-#: templates/dashboard.html:189
+#: templates/dashboard.html:170
 msgid "Available Teams"
 msgstr ""
 
@@ -406,6 +410,7 @@ msgstr "Vous avez été invité à rejoindre \"%(team)s\""
 
 #: templates/proposals/_pending_proposal_row.html:12
 #: templates/proposals/_proposal_row.html:12
+#: templates/proposals/proposal_detail.html:27
 msgid "Cancelled"
 msgstr "Annulé"
 
