@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-22 22:49-0400\n"
+"POT-Creation-Date: 2013-06-23 02:26-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -369,6 +369,7 @@ msgstr ""
 
 #: templates/proposals/_pending_proposal_row.html:12
 #: templates/proposals/_proposal_row.html:12
+#: templates/proposals/proposal_detail.html:27
 msgid "Cancelled"
 msgstr ""
 
