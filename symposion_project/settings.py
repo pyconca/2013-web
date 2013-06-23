@@ -100,6 +100,7 @@ MIDDLEWARE_CLASSES = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django_switchuser.middleware.SuStateMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.transaction.TransactionMiddleware",
     "reversion.middleware.RevisionMiddleware",
@@ -131,6 +132,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "pinax_utils.context_processors.settings",
     "account.context_processors.account",
     "symposion.reviews.context_processors.reviews",
+    "django_switchuser.context_processors.su_state",
 ]
 
 INSTALLED_APPS = [
@@ -160,6 +162,7 @@ INSTALLED_APPS = [
     "easy_thumbnails",
     "sitetree",
     "account",
+    "django_switchuser",
 
     # symposion
     "symposion",

@@ -70,6 +70,8 @@ urlpatterns += i18n_patterns("",
     url(r"^reviews/", include("symposion.reviews.urls")),
     url(r"^schedule/", include("symposion.schedule.urls")),
     url(r"^markitup/", include("markitup.urls")),
+
+    url(r"^su/", include("django_switchuser.urls")),
 )
 
 
