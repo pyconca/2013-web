@@ -131,6 +131,25 @@
                 </table>
                 
                 <h4><a href="{% url review_assignments %}">{% trans "My Assignments" %}</a></h4>
+                {% review_assignments as review_assignments %}
+                {% if unvoted_proposal_assignments %}
+                    <table border="1">
+                        <tr>
+                            <th>Proposals you need to vote on</th>
+                        </tr>
+                        {% for assignment in unvoted_proposal_assignments %}
+                        <tr>
+                            <td>
+                                <a href="{% url review_detail assignment.proposal.pk %}">
+                                    {{ assignment.proposal.kind.name }}:
+                                    {{ assignment.proposal.title }}
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                {% endif %}
+
                 
             </div>
     </div>
