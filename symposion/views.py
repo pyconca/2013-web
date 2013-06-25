@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 import account.views
 
 import symposion.forms
+from symposion.reviews.models import Review, ReviewAssignment
 
 
 class SignupView(account.views.SignupView):
@@ -52,4 +53,10 @@ class LoginView(account.views.LoginView):
 def dashboard(request):
     if request.session.get("pending-token"):
         return redirect("speaker_create_token", request.session["pending-token"])
-    return render(request, "dashboard.html")
+    unvoted_proposal_assignments = set([
+        review_assignment
+        for review_assignment in ReviewAssignment.objects.filter(user=request.user)
+        if Review.objects.filter(
+            user=request.user, proposal=review_assignment.proposal).count() == 0])
+    return render(request, "dashboard.html", {
+        'unvoted_proposal_assignments': unvoted_proposal_assignments})
