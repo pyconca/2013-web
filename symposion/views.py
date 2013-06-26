@@ -55,7 +55,8 @@ def dashboard(request):
         return redirect("speaker_create_token", request.session["pending-token"])
     unvoted_proposal_assignments = set([
         review_assignment
-        for review_assignment in ReviewAssignment.objects.filter(user=request.user)
+        for review_assignment in ReviewAssignment.objects.filter(
+            user=request.user, opted_out=False)
         if Review.objects.filter(
             user=request.user, proposal=review_assignment.proposal).count() == 0])
     return render(request, "dashboard.html", {
