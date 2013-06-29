@@ -1,8 +1,13 @@
+import datetime
+import json
+
 from django.core.exceptions import ObjectDoesNotExist
-from django.http import Http404, HttpResponse
+from django.core.urlresolvers import reverse
+from django.http import Http404, HttpResponseForbidden, HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.template import loader, Context
 
+from django.contrib.sites.models import Site
 from django.contrib.auth.decorators import login_required
 
 from symposion.schedule.forms import SlotEditForm
@@ -157,3 +162,53 @@ def schedule_presentation_detail(request, pk):
         "schedule": schedule,
     }
     return render(request, "schedule/presentation_detail.html", ctx)
+
+
+def schedule_json(request):
+    if not request.user.is_staff:
+        return HttpResponseForbidden()
+
+    slots = Slot.objects.all().order_by("start")
+    data = []
+    for slot in slots:
+        if slot.kind.label in ["talk", "tutorial", "lightning"] and slot.content:
+            start_datetime = datetime.datetime(
+                slot.day.date.year,
+                slot.day.date.month,
+                slot.day.date.day,
+                slot.start.hour,
+                slot.start.minute)
+            end_datetime = datetime.datetime(
+                slot.day.date.year,
+                slot.day.date.month,
+                slot.day.date.day,
+                slot.end.hour,
+                slot.end.minute)
+            slot_data = {
+                "name": slot.content.title,
+                "room": ", ".join(room["name"] for room in slot.rooms.values()),
+                "start": start_datetime.isoformat(),
+                "end": end_datetime.isoformat(),
+                "duration": int((end_datetime - start_datetime).seconds / 60),
+                "authors": [s.name for s in slot.content.speakers()],
+                "released": slot.content.proposal.recording_release,
+                "license": "CC BY-SA 2.5 CA",
+                "contact": [s.email for s in slot.content.speakers()],
+                "abstract": slot.content.abstract.raw,
+                "description": slot.content.description.raw,
+                "conf_key": slot.pk,
+                "conf_url": "https://%s%s" % (
+                    Site.objects.get_current().domain,
+                    reverse("schedule_presentation_detail", args=[slot.content.pk])
+                ),
+                "kind": slot.kind.label,
+                "tags": "",
+            }
+        else:
+            continue
+        data.append(slot_data)
+
+    return HttpResponse(
+        json.dumps({'schedule': data}),
+        content_type="application/json"
+    )
