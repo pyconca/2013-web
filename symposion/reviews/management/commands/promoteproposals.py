@@ -12,4 +12,3 @@ class Command(BaseCommand):
         
         for result in accepted_proposals:
             promote_proposal(result.proposal)
-        connections["default"].cursor().execute("SELECT setval('schedule_session_id_seq', (SELECT max(id) FROM schedule_session))")
