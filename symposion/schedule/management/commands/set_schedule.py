@@ -124,19 +124,19 @@ def do_room(day, time, room, content):
     elif talk:
         create_talk(day, time, 20, room, int(talk.group('id')))
     elif lightning:
-        for i, id_ in enumerate(lightning):
+        for (offset, length), id_ in zip([(0, 7), (7, 7), (14, 6)], lightning):
             if id_ == '??':
                 create_slot(
                     day,
-                    get_end(time, i * 5),
-                    5,
+                    get_end(time, offset),
+                    length,
                     room,
                     'Lightning Talk')
             else:
                 create_talk(
                     day,
-                    get_end(time, i * 5),
-                    5,
+                    get_end(time, offset),
+                    length,
                     room,
                     int(id_))
     elif keynote:
