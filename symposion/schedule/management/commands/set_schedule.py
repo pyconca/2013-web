@@ -3,6 +3,7 @@ import datetime
 import re
 
 from django.core.management.base import BaseCommand
+from django.db import transaction
 
 from symposion.conference.models import Section
 from symposion.schedule import models
@@ -147,21 +148,22 @@ class Command(BaseCommand):
         models.Slot.objects.all().delete()
 
     def handle(self, *args, **options):
-        self.cleanup()
-        reader = filter(
-            lambda x: x[0].startswith((
-                'Saturday', 'Sunday')),
-            csv.reader(open(args[0])))
-        slots = []
-        for line in reader:
-            day, time, length, content1, content2, content3 = line[:6]
-            day = day_map[day]
-            if content1:
-                do_room(day, time, 1, content1)
-            if content2:
-                do_room(day, time, 2, content2)
-            if content3:
-                do_room(day, time, 3, content3)
+        with transaction.commit_on_success():
+            self.cleanup()
+            reader = filter(
+                lambda x: x[0].startswith((
+                    'Saturday', 'Sunday')),
+                csv.reader(open(args[0])))
+            slots = []
+            for line in reader:
+                day, time, length, content1, content2, content3 = line[:6]
+                day = day_map[day]
+                if content1:
+                    do_room(day, time, 1, content1)
+                if content2:
+                    do_room(day, time, 2, content2)
+                if content3:
+                    do_room(day, time, 3, content3)
 
 #import copy
 #from cStringIO import StringIO
