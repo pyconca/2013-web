@@ -32,11 +32,17 @@ def get_end(time, length):
     ).strftime("%H:%M")
 
 
+rooms = {
+    r: models.Room.objects.get(pk=r)
+    for r in (1, 2, 3)
+}
+
+
 talk_section = Section.objects.get(pk=2)
 
 
-def create_talk(day, time, length, room, id_):
-    print "create_talk", day, time, length, room, id_
+def create_talk(day, time, length, room, id_, fullwidth=False):
+    print "create_talk", day, time, length, room, id_, fullwidth
     slot = models.Slot(
         id=id_,
         day_id=day,
@@ -45,13 +51,14 @@ def create_talk(day, time, length, room, id_):
         end=get_end(time, length),
     )
     slot.save()
-    room = models.Room.objects.get(pk=room)
-    slot_room = models.SlotRoom(slot=slot, room=room)
-    slot_room.save()
+    models.SlotRoom(slot=slot, room=rooms[room]).save()
+    if fullwidth:
+        models.SlotRoom(slot=slot, room=rooms[2]).save()
+        models.SlotRoom(slot=slot, room=rooms[3]).save()
     try:
         proposal = ProposalBase.objects.get(pk=id_)
     except:
-        print "Couldn't find ProposalBase(pk=%d)" % (id_,)
+        print "XXX Couldn't find ProposalBase(pk=%d)" % (id_,)
         return
     presentation = models.Presentation(
         slot=slot,
@@ -70,11 +77,12 @@ def create_talk(day, time, length, room, id_):
     presentation.save()
 
 
+
 slot_id = autoincrement(start=1000)
 
 
-def create_slot(day, time, length, room, message):
-    print "create_slot", day, time, length, room, message
+def create_slot(day, time, length, room, message, fullwidth=False):
+    print "create_slot", day, time, length, room, message, fullwidth
     slot = models.Slot(
         id=slot_id.next(),
         day_id=day,
@@ -84,9 +92,10 @@ def create_slot(day, time, length, room, message):
         content_override=message,
     )
     slot.save()
-    room = models.Room.objects.get(pk=room)
-    slot_room = models.SlotRoom(slot=slot, room=room)
-    slot_room.save()
+    models.SlotRoom(slot=slot, room=rooms[room]).save()
+    if fullwidth:
+        models.SlotRoom(slot=slot, room=rooms[2]).save()
+        models.SlotRoom(slot=slot, room=rooms[3]).save()
 
 
 talk40_re = re.compile(r'^A(?P<id>\d+):')
@@ -95,7 +104,7 @@ lightning_re = re.compile(r'^L(?P<id>\d+|\?\?):', re.M)
 keynote_re = re.compile(r'^K(?P<id>\d+):')
 tutorial_re = re.compile(r'^T(?P<id>\d+):(?P<length>\d+)')
 lunch_re = re.compile(r'^lunch')
-break_re = re.compile(r'^(?P<long>long )?break')
+break_re = re.compile(r'^break (?P<length>\d+)')
 messages_re = re.compile(r'^M:(?P<length>\d+) (?P<message>.*)')
 
 
@@ -117,24 +126,29 @@ def do_room(day, time, room, content):
     elif lightning:
         for i, id_ in enumerate(lightning):
             if id_ == '??':
-                print "UNNAMED LIGHTNING SLOT"
-                continue
-            create_talk(
-                day,
-                get_end(time, i * 5),
-                5,
-                room,
-                int(id_))
+                create_slot(
+                    day,
+                    get_end(time, i * 5),
+                    5,
+                    room,
+                    'Lightning Talk')
+            else:
+                create_talk(
+                    day,
+                    get_end(time, i * 5),
+                    5,
+                    room,
+                    int(id_))
     elif keynote:
-        create_talk(day, time, 45, room, int(keynote.group('id')))
+        create_talk(day, time, 45, room, int(keynote.group('id')), fullwidth=True)
     elif tutorial:
         create_talk(day, time, int(tutorial.group('length')), room, int(tutorial.group('id')))
     elif lunch:
-        create_slot(day, time, 90, room, 'Lunch')
+        create_slot(day, time, 90, room, 'Lunch', fullwidth=True)
     elif break_:
-        create_slot(day, time, 20 if break_.group('long') else 10, room, 'Break')
+        create_slot(day, time, int(break_.group('length')), room, 'Break')
     elif messages:
-        create_slot(day, time, int(messages.group('length')), room, messages.group('message'))
+        create_slot(day, time, int(messages.group('length')), room, messages.group('message'), fullwidth=True)
     else:
         print talk40, talk, lightning, keynote, tutorial, lunch, break_, content
 
