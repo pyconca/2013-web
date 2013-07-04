@@ -1,8 +1,10 @@
-{% extends "site_base.html" %}
+{% extends "content_base.html" %}
+
+{% load i18n %}
 
 {% load sitetree %}
 
-{% block head_title %}Presentation: {{ presentation.title }}{% endblock %}
+{% block head_title %}{% trans "Presentation:" %} {{ presentation.title }}{% endblock %}
 
 {% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
 
@@ -21,15 +23,15 @@
     </h4>
 
     <dl class="dl-horizontal">
-        <dt>Audience level:</dt>
+        <dt>{% trans "Audience level:" %}</dt>
         <dd style="margin-bottom: 0;">{{ presentation.proposal.get_audience_level_display }}</dd>
     </dl>
 
-    <h3>Description</h3>
+    <h2>{% trans "Description" %}</h2>
 
     <div class="description">{{ presentation.description }}</div>
 
-    <h3>Abstract</h3>
+    <h2>{% trans "Abstract" %}</h2>
 
     <div class="abstract">{{ presentation.abstract|safe }}</div>
 {% endblock %}
