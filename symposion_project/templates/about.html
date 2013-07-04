@@ -47,6 +47,22 @@
   {% blocktrans %}If you'd like to speak at PyCon Canada, submissions are due June 21, 2013.{% endblocktrans %}
 </p>
 
+<h2 id="educators">{% trans "Educator Grants" %}</h2>
+
+<p>{% blocktrans %}If you are a highschool educator in computer science or a related field, we would invite you to apply for one of our "educator grants" by contacting us at <a href="mailto:board@pycon.ca">board@pycon.ca</a> and:{% endblocktrans %}</p>
+
+<ul>
+    <li><p>{% blocktrans %}Telling us a bit about yourself{% endblocktrans %}</p></li>
+    <li><p>{% blocktrans %}Supplying a short paragraph on why you would like to attend{% endblocktrans %}</p></li>
+    <li><p>{% blocktrans %}Giving your estimated cost of travel to and from Toronto for the period of Aug 9-11th, 2013 (i.e. cost of your transportation only){% endblocktrans %}</p></li>
+</ul>
+
+<p>{% blocktrans %}We are especially interested in applications from teachers who are from remote communities or who would otherwise have difficulty accessing and attending a top-tier tech conference in North America.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}We hope that by attending PyCon Canada 2013, highschool educators can take the lessons learned and relationships forged at our conference and disseminate them to their students and colleagues in their home communities.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}If you have any questions about this program, please don't be shy&mdash;contact us at <a href="mailto:board@pycon.ca">board@pycon.ca</a>!{% endblocktrans %}</p>
+
 <h2 id="codeofconduct">{% trans "Code of Conduct" %}</h2>
 {% url conduct as conduct_url %}
 {% blocktrans with conduct_url=conduct_url %}<p>The PyCon Canada organizing team is committed to creating a safe and welcoming environment for all attendees; all of our volunteers and staff are trained to handle conduct violations swiftly and tactfully.</p><p>Please familiarize yourself with the <a href="{{ conduct_url }}">Code of Conduct</a> before the conference, and if you witness or experience a code of conduct violation at PyCon Canada 2013, <em>let one of our organizers know right away</em>. We will immediately take whatever steps are necessary to address the situation.</p>{% endblocktrans %}
