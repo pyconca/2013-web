@@ -4,8 +4,8 @@
         "model": "schedule.schedule",
         "fields": {
             "section": 1,
-            "published": true,
-            "hidden": false
+            "published": false,
+            "hidden": true
         }
     },
     {
@@ -22,24 +22,8 @@
         "model": "schedule.schedule",
         "fields": {
             "section": 3,
-            "published": true,
-            "hidden": false
-        }
-    },
-    {
-        "pk": 1,
-        "model": "schedule.day",
-        "fields": {
-            "schedule": 1,
-            "date": "2013-08-10"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "schedule.day",
-        "fields": {
-            "schedule": 1,
-            "date": "2013-08-11"
+            "published": false,
+            "hidden": true
         }
     },
     {
@@ -63,7 +47,7 @@
         "model": "schedule.room",
         "fields": {
             "schedule": 2,
-            "name": "Colony Ballroom",
+            "name": "Main Ballroom",
             "order": 1
         }
     },
@@ -72,16 +56,25 @@
         "model": "schedule.room",
         "fields": {
             "schedule": 2,
-            "name": "Giovanni Room",
+            "name": "Terrace",
             "order": 2
         }
     },
     {
+        "pk": 3,
+        "model": "schedule.room",
+        "fields": {
+            "schedule": 2,
+            "name": "St. David",
+            "order": 3
+        }
+    },
+    {
         "pk": 1,
         "model": "schedule.slotkind",
         "fields": {
             "schedule": 2,
-            "label": "25 Minute Talk"
+            "label": "talk"
         }
     },
     {
@@ -89,27 +82,7 @@
         "model": "schedule.slotkind",
         "fields": {
             "schedule": 2,
-            "label": "Lunch"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "schedule.slot",
-        "fields": {
-            "day": 1,
-            "kind": 1,
-            "start": "10:00",
-            "end": "10:25"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "schedule.slot",
-        "fields": {
-            "day": 1,
-            "kind": 2,
-            "start": "12:00",
-            "end": "13:00"
+            "label": "nontalk"
         }
     }
 ]
