@@ -41,12 +41,12 @@ rooms = {
 talk_section = Section.objects.get(pk=2)
 
 
-def create_talk(day, time, length, room, id_, fullwidth=False):
+def create_talk(day, time, length, room, id_, kind=None, fullwidth=False):
     print "create_talk", day, time, length, room, id_, fullwidth
     slot = models.Slot(
         id=id_,
         day_id=day,
-        kind_id=1,
+        kind=kind,
         start=time,
         end=get_end(time, length),
     )
@@ -80,13 +80,23 @@ def create_talk(day, time, length, room, id_, fullwidth=False):
 
 slot_id = autoincrement(start=1000)
 
+SLOT_KINDS = {
+    "lunch": models.SlotKind(label="Lunch"),
+    "talk20": models.SlotKind(label="Talk"),
+    "talk40": models.SlotKind(label="Talk"),
+    "tutorial": models.SlotKind(label="Tutorial"),
+    "messages": models.SlotKind(label="Messages"),
+    "keynote": models.SlotKind(label="Keynote"),
+    "lightning": models.SlotKind(label="Lightning talk"),
+}
 
-def create_slot(day, time, length, room, message, fullwidth=False):
+
+def create_slot(day, time, length, room, message, kind=None, fullwidth=False):
     print "create_slot", day, time, length, room, message, fullwidth
     slot = models.Slot(
         id=slot_id.next(),
         day_id=day,
-        kind_id=2,
+        kind=kind,
         start=time,
         end=get_end(time, length),
         content_override=message,
@@ -120,10 +130,13 @@ def do_room(day, time, room, content):
     break_ = break_re.match(content)
     messages = messages_re.match(content)
     if talk40:
-        create_talk(day, time, 40, room, int(talk40.group('id')))
+        kind = SLOT_KINDS["talk40"]
+        create_talk(day, time, 40, room, int(talk40.group('id')), kind=kind)
     elif talk:
-        create_talk(day, time, 20, room, int(talk.group('id')))
+        kind = SLOT_KINDS["talk20"]
+        create_talk(day, time, 20, room, int(talk.group('id')), kind=kind)
     elif lightning:
+        kind = SLOT_KINDS["lightning"]
         for (offset, length), id_ in zip([(0, 7), (7, 7), (14, 6)], lightning):
             if id_ == '??':
                 create_slot(
@@ -131,27 +144,33 @@ def do_room(day, time, room, content):
                     get_end(time, offset),
                     length,
                     room,
-                    'Lightning Talk')
+                    'Lightning Talk',
+                    kind=kind)
             else:
                 create_talk(
                     day,
                     get_end(time, offset),
                     length,
                     room,
-                    int(id_))
+                    int(id_),
+                    kind=kind)
     elif keynote:
-        create_talk(day, time, 45, room, int(keynote.group('id')), fullwidth=True)
+        kind = SLOT_KINDS["keynote"]
+        create_talk(day, time, 45, room, int(keynote.group('id')), kind=kind, fullwidth=True)
     elif tutorial:
-        create_talk(day, time, int(tutorial.group('length')), room, int(tutorial.group('id')))
+        kind = SLOT_KINDS["tutorial"]
+        create_talk(day, time, int(tutorial.group('length')), room, int(tutorial.group('id')), kind=kind)
     elif lunch:
-        create_slot(day, time, 90, room, 'Lunch', fullwidth=True)
+        kind = SLOT_KINDS["lunch"]
+        create_slot(day, time, 90, room, 'Lunch', kind=kind, fullwidth=True)
     elif break_:
         #create_slot(day, time, int(break_.group('length')), room, 'Break')
         pass
     elif messages:
-        create_slot(day, time, int(messages.group('length')), room, messages.group('message'), fullwidth=True)
+        kind = SLOT_KINDS["messages"]
+        create_slot(day, time, int(messages.group('length')), room, messages.group('message'), kind, fullwidth=True)
     else:
-        print talk40, talk, lightning, keynote, tutorial, lunch, break_, content
+        print "UNKNOWN KIND:", talk40, talk, lightning, keynote, tutorial, lunch, break_, content
 
 class Command(BaseCommand):
 
@@ -161,15 +180,23 @@ class Command(BaseCommand):
         models.SlotRoom.objects.all().delete()
         models.Presentation.objects.all().delete()
         models.Slot.objects.all().delete()
+        models.SlotKind.objects.all().delete()
+
+    def setup(self):
+        for slot_kind in SLOT_KINDS.values():
+            # XXX: Why this one? I have no idea. It was picked more or less
+            # arbitrarily.
+            slot_kind.schedule_id = 1
+            slot_kind.save()
 
     def handle(self, *args, **options):
         with transaction.commit_on_success():
             self.cleanup()
+            self.setup()
             reader = filter(
                 lambda x: x[0].startswith((
                     'Saturday', 'Sunday')),
                 csv.reader(open(args[0])))
-            slots = []
             for line in reader:
                 day, time, length, content1, content2, content3 = line[:6]
                 day = day_map[day]
