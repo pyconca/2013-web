@@ -146,7 +146,8 @@ def do_room(day, time, room, content):
     elif lunch:
         create_slot(day, time, 90, room, 'Lunch', fullwidth=True)
     elif break_:
-        create_slot(day, time, int(break_.group('length')), room, 'Break')
+        #create_slot(day, time, int(break_.group('length')), room, 'Break')
+        pass
     elif messages:
         create_slot(day, time, int(messages.group('length')), room, messages.group('message'), fullwidth=True)
     else:
