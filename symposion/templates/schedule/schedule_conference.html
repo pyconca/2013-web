@@ -15,21 +15,25 @@
 
   <h3>{% trans "Conference Schedule" %}</h3>
   {% block breadcrumbs %}{% endblock %}
+
+  <h2>{% trans "Friday August 9" %}</h2>
+  <p>{% trans "Evening social event." %}</p>
+
   {% for section in sections %}
     {% cache 600 "schedule-table" section.schedule.section %}
       {% for timetable in section.days %}
-        <h2>{{ section.schedule.section.name }} — {{ timetable.day.date }}</h2>
+        <h2>{{ section.schedule.section.name }} — {{ timetable.day.date|date:"l F j" }}</h2>
       {% include "schedule/_grid.html" %}
       {% endfor %}
     {% endcache %}
   {% endfor %}
 
-  <h2>Sprints — Monday August 12</h2>
+  <h2>{% trans "Sprints — Monday August 12" %}</h2>
   {% url sprints as sprints_url %}
   <p>{% blocktrans with sprints_url=sprints_url %}<a href="{{ sprints_url }}">Development Sprints</a>{% endblocktrans %}</p>
 
   {% trans "SPRINT_WHAT" %}
-  <h2>Sprints — Tuesday August 13</h2>
+  <h2>{% trans "Sprints — Tuesday August 13" %}</h2>
   <p>{% blocktrans with sprints_url=sprints_url %}<a href="{{ sprints_url }}">Development Sprints</a>{% endblocktrans %}</p>
 
     <div id="details" class="row-fluid">
