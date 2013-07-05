@@ -166,7 +166,10 @@ def schedule_presentation_detail(request, pk):
 
 def schedule_json(request):
     if not request.user.is_staff:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(
+            json.dumps({"errors": ["Not logged in as staff. Try again?"]}) +
+            '\n',
+            content_type="application/json",)
 
     slots = Slot.objects.all().order_by("start")
     data = []
