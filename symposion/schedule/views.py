@@ -174,7 +174,7 @@ def schedule_json(request):
     slots = Slot.objects.all().order_by("start")
     data = []
     for slot in slots:
-        if slot.kind.label in ["talk", "tutorial", "lightning"] and slot.content:
+        if slot.kind.is_normal() and slot.content:
             start_datetime = datetime.datetime(
                 slot.day.date.year,
                 slot.day.date.month,
