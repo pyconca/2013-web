@@ -185,9 +185,7 @@ class Command(BaseCommand):
 
     def setup(self):
         for slot_kind in SLOT_KINDS.values():
-            # XXX: Why this one? I have no idea. It was picked more or less
-            # arbitrarily.
-            slot_kind.schedule_id = 1
+            slot_kind.schedule_id = 2
             slot_kind.save()
 
     def handle(self, *args, **options):
