@@ -199,7 +199,7 @@ def schedule_json(request):
                 "contact": [s.email for s in slot.content.speakers()],
                 "abstract": slot.content.abstract.raw,
                 "description": slot.content.description.raw,
-                "conf_key": slot.pk,
+                "conf_key": slot.content.pk,
                 "conf_url": "https://%s%s" % (
                     Site.objects.get_current().domain,
                     reverse("schedule_presentation_detail", args=[slot.content.pk])
