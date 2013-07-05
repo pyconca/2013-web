@@ -61,6 +61,7 @@ def create_talk(day, time, length, room, id_, kind=None, fullwidth=False):
         print "XXX Couldn't find ProposalBase(pk=%d)" % (id_,)
         return
     presentation = models.Presentation(
+        id=id_,
         slot=slot,
         title=proposal.title,
         abstract=proposal.abstract,
