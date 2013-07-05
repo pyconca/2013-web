@@ -52,7 +52,12 @@ class SlotKind(models.Model):
     
     schedule = models.ForeignKey(Schedule)
     label = models.CharField(max_length=50)
-    
+
+    normal_labels = set(["Talk", "Tutorial", "Keynote", "Lightning talk"])
+
+    def is_normal(self):
+        return self.label in self.normal_labels
+
     def __unicode__(self):
         return self.label
 

@@ -81,6 +81,7 @@ def create_talk(day, time, length, room, id_, kind=None, fullwidth=False):
 slot_id = autoincrement(start=1000)
 
 SLOT_KINDS = {
+    # XXX WARNING: MAKE SURE THAT SlotKind.normal_labels IS ALSO CHANGED
     "lunch": models.SlotKind(label="Lunch"),
     "talk20": models.SlotKind(label="Talk"),
     "talk40": models.SlotKind(label="Talk"),
