@@ -1,4 +1,4 @@
-<table class="calendar table table-bordered">
+<table class="calendar table table-bordered" id="schedule-conference">
     <thead>
         <tr>
             <th class="time">&nbsp;</th>
@@ -18,9 +18,11 @@
                             {% else %}
                                 <span class="title">
                                     <a href="{% url schedule_presentation_detail slot.content.pk %}">{{ slot.content.title }}</a>
-                                </span>
+                                </span><br />
                                 <span class="speaker">
-                                    {{ slot.content.speakers|join:", " }}
+                                    {% for speaker in slot.content.speakers %}
+                                    <a href="{% url speaker_profile speaker.pk %}">{{ speaker }}</a>{% if not forloop.last %},{% endif %}
+                                    {% endfor %}
                                 </span>
                             {% endif %}
                         {% else %}

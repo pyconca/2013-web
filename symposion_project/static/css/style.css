@@ -6306,7 +6306,18 @@ table.staff th, table.staff td {
     font-size: 150%;
     margin: 0.5em;
 }
-table.calendar td.slot {
+.calendar td.slot {
     background: #064662;
     border: 1px solid white;
+    width: 30%;
+}
+span.title a {
+  font-weight: bold;
+  color: #f7e339;
+  font-size: 1.0em;
+}
+span.speaker a {
+  font-weight: bold;
+  color: white;
+  font-size: 1.0em;
 }
