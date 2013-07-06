@@ -175,24 +175,12 @@ def schedule_json(request):
     data = []
     for slot in slots:
         if slot.kind.is_normal() and slot.content:
-            start_datetime = datetime.datetime(
-                slot.day.date.year,
-                slot.day.date.month,
-                slot.day.date.day,
-                slot.start.hour,
-                slot.start.minute)
-            end_datetime = datetime.datetime(
-                slot.day.date.year,
-                slot.day.date.month,
-                slot.day.date.day,
-                slot.end.hour,
-                slot.end.minute)
             slot_data = {
                 "name": slot.content.title,
                 "room": ", ".join(room["name"] for room in slot.rooms.values()),
-                "start": start_datetime.isoformat(),
-                "end": end_datetime.isoformat(),
-                "duration": int((end_datetime - start_datetime).seconds / 60),
+                "start": slot.start_datetime.isoformat(),
+                "end": slot.end_datetime.isoformat(),
+                "duration": slot.length_in_minutes,
                 "authors": [s.name for s in slot.content.speakers()],
                 "released": slot.content.proposal.recording_release,
                 "license": "CC BY-SA 2.5 CA",
