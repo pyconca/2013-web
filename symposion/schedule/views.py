@@ -165,12 +165,6 @@ def schedule_presentation_detail(request, pk):
 
 
 def schedule_json(request):
-    if not request.user.is_staff:
-        return HttpResponseForbidden(
-            json.dumps({"errors": ["Not logged in as staff. Try again?"]}) +
-            '\n',
-            content_type="application/json",)
-
     slots = Slot.objects.all().order_by("start")
     data = []
     for slot in slots:
@@ -184,7 +178,10 @@ def schedule_json(request):
                 "authors": [s.name for s in slot.content.speakers()],
                 "released": slot.content.proposal.recording_release,
                 "license": "CC BY-SA 2.5 CA",
-                "contact": [s.email for s in slot.content.speakers()],
+                "contact":
+                [s.email for s in slot.content.speakers()]
+                if request.user.is_staff
+                else ["redacted"],
                 "abstract": slot.content.abstract.raw,
                 "description": slot.content.description.raw,
                 "conf_key": slot.content.pk,
