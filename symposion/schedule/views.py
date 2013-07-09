@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 from symposion.schedule.forms import SlotEditForm
 from symposion.schedule.models import Schedule, Day, Slot, Presentation
 from symposion.schedule.timetable import TimeTable
+from symposion.reviews.models import ProposalBase
 
 
 def fetch_schedule(slug):
@@ -200,3 +201,36 @@ def schedule_json(request):
         json.dumps({'schedule': data}),
         content_type="application/json"
     )
+
+
+def schedule_presentation_comparison(request):
+    if not request.user.is_staff:
+        raise Http404()
+
+    presentations = Presentation.objects.all()
+    proposals = ProposalBase.objects.all()
+    things = {
+        p.id: {
+            "id": p.id,
+            "pre_title": p.title,
+            "pre_abstract": p.abstract.raw,
+            "pre_description": p.description.raw,
+            "kind": p.slot.kind.label,
+        }
+        for p in presentations
+    }
+    for p in proposals:
+        if p.id in things:
+            d = things[p.id]
+            d["pro_title"] = p.title
+            d["pro_abstract"] = p.abstract.raw
+            d["pro_description"] = p.description
+            d["title_colour"] = "red" if d["pro_title"] != d["pre_title"] else "black";
+            d["abstract_colour"] = "red" if d["pro_abstract"] != d["pre_abstract"] else "black";
+            d["description_colour"] = "red" if d["pro_description"] != d["pre_description"] else "black";
+
+
+    ctx = {
+        "presentations": things.values(),
+    }
+    return render(request, "schedule/presentation_comparison.html", ctx)

@@ -1,0 +1,31 @@
+{% extends "site_base.html" %}
+
+{% block head_title %}Presentation/proposal comparison{% endblock %}
+
+{% block body_outer %}
+<div class="container-fluid" id="details">
+    {% for p in presentations %}
+    <table border="1">
+        <tr><td colspan="2"><a name="{{ p.id }}">{{ p.kind }} - {{ p.id }}</a></td></tr>
+        <tr>
+            <td width="50%"><a href="{% url admin:schedule_presentation_change p.id %}">Edit Presentation</a></td>
+            <td>
+                {% if p.kind == 'Talk' %}
+                    <a href="{% url admin:proposals_talkproposal_change p.id %}">Edit Proposal</a>
+                {% endif %}
+                {% if p.kind == 'Tutorial' %}
+                    <a href="{% url admin:proposals_tutorialproposal_change p.id %}">Edit Proposal</a>
+                {% endif %}
+                {% if p.kind == 'Lightning talk' %}
+                    <a href="{% url admin:proposals_lightningproposal_change p.id %}">Edit Proposal</a>
+                {% endif %}
+            </td>
+        </tr>
+        <tr><td style="background:{{p.title_colour}}">{{ p.pre_title }}</td><td>{{ p.pro_title }}</td></tr>
+        <tr><td style="background:{{p.abstract_colour}}">{{ p.pre_abstract|linebreaksbr }}</td><td>{{ p.pro_abstract|linebreaksbr }}</td></tr>
+        <tr><td style="background:{{p.description_colour}}">{{ p.pre_description|linebreaksbr }}</td><td>{{ p.pro_description|linebreaksbr }}</td></tr>
+    </table>
+    <br />
+    {% endfor %}
+</div>
+{% endblock %}
