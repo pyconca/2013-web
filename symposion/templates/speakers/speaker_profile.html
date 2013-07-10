@@ -24,7 +24,7 @@
             
             <h2>{% trans "Presentations" %}</h2>
             {% for presentation in presentations %}
-                <h2><a href="{% url schedule_presentation_detail presentation.pk %}">{{ presentation.title }}</a></h2>
+                <h4><a href="{% url schedule_presentation_detail presentation.pk %}">{{ presentation.title }}</a></h4>
                 {% if presentation.slot %}
                     <p>
                         {{ presentation.slot.day.date|date:"l" }}
