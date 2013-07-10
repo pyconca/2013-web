@@ -82,6 +82,7 @@
               {% if sponsor.listing_text %}
                 data-title="{{ sponsor.name }}"
                 data-content="{{ sponsor.listing_text|linebreaks }}"
+                data-placement="{% if forloop.first and not forloop.last %}right{% else %}left{% endif %}"
               {% endif %}
               class="sponsor-tooltip"
               >
