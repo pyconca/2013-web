@@ -166,6 +166,7 @@ def schedule_presentation_detail(request, pk):
 
 
 def schedule_json(request):
+    everything = bool(request.GET.get('everything'))
     slots = Slot.objects.all().order_by("start")
     data = []
     for slot in slots:
@@ -192,6 +193,15 @@ def schedule_json(request):
                 ),
                 "kind": slot.kind.label,
                 "tags": "",
+            }
+        elif everything:
+            slot_data = {
+                "room": ", ".join(room["name"] for room in slot.rooms.values()),
+                "start": slot.start_datetime.isoformat(),
+                "end": slot.end_datetime.isoformat(),
+                "duration": slot.length_in_minutes,
+                "kind": slot.kind.label,
+                "title": slot.content_override.raw,
             }
         else:
             continue
