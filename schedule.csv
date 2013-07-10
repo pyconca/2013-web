@@ -31,13 +31,13 @@ Saturday,15:25,20,A100: B. Rhodes: Skyfield and 15 Years of Bad APIs,"B88: É. A
 Saturday,15:45,20,,B81: B. Laflamme: Python Webapp Modern Workflow,,,,
 Saturday,16:05,25,break 25,break 25,,,,
 Saturday,16:30,20,"B96: B. Cannon: 
-From Source to Code: How CPython's Compiler Works",B42: V. Sabino: Exploring the Google Analytics API,,,,
+From Source to Code: How CPython's Compiler Works",B73: J. Evans: Diving into Open Data with IPython Notebook & pandas,,,,
 Saturday,16:50,10,break 10,break 10,,,,
 Saturday,17:00,20,"L26: S. Iyer: Open source circuit simulator in Python
 L72: D. Latornell: Bloomcast - Python Facilitating Operational Oceanography
 L86: A. Dubrau: A 65-Year-Old Map Nobody Has Ever Seen",B19: D. Scott: A Flask of full-text search with PostgreSQL,,,,
 Saturday,17:20,10,break 10,break 10,break 10,,,
-Saturday,17:30,45,K105: Keynote (Karen Brennan),,,,,
+Saturday,17:30,45,K106: Opening keynote (Hilary Mason),,,,,
 Saturday,18:15,15,M:15 Closing Messages,,,,,
 Saturday,18:30,,SEEYA,,,,,
 ,,,,,,,,
@@ -46,9 +46,9 @@ Day,Time,,Main Ballroom,Terrace,St. David,Ballroom west,Outside ballroom,Giovann
 Sunday,7:00,90,Setup,Setup,Setup,Breakfast setup,Registration setup,Sponsor setup
 Sunday,8:30,75,,,,Breakfast,Registration,Sponsor setup
 Sunday,9:45,25,M:25 Morning Messages,,,,,
-Sunday,10:10,45,K106: Opening keynote (Hilary Mason),,,,,
+Sunday,10:10,45,K105: Keynote (Karen Brennan),,,,,
 Sunday,10:55,10,break 10,break 10,break 10,,,Sponsor + coffee
-Sunday,11:05,20,A98: A. Gaynor: Why Open Source Works,B73: J. Evans: Diving into Open Data with IPython Notebook & pandas,T27:100 V. Kanaujia: Dissecting memory mysteries of Python,,,
+Sunday,11:05,20,A98: A. Gaynor: Why Open Source Works,B42: V. Sabino: Exploring the Google Analytics API,T27:100 V. Kanaujia: Dissecting memory mysteries of Python,,,
 Sunday,11:25,5,,break 5,,,,
 Sunday,11:30,15,,B11: C. Hawco: Python and Hadoop: Big Data Application Development with PyCascading,,,,
 Sunday,11:45,5,break 15,,,,,
@@ -56,8 +56,8 @@ Sunday,11:50,10,,break 10,,,,
 Sunday,12:00,20,A46: M. Chua: EduPsych Theory for Python Hackers v.2.0,B20: C. Davidson-Pilon: Bayesian Methods for Hackers,,,,
 Sunday,12:20,5,,break 5,,,,
 Sunday,12:25,15,,"L41: B. Vaez: Mobile Web Performance Hits You Didn't Know About
-L21: R. Elsmore: How to Lose Friends and Influence Burnout
-L90: H. David: Pyramid-Royal: building restful web services the easy way",,,,
+L90: H. David: Pyramid-Royal: building restful web services the easy way
+L??:",,,,
 Sunday,12:40,5,break 5,,,,,
 Sunday,12:45,90,lunch (seating),,,lunch (buffet),,
 Sunday,14:15,20,A107: D. Bauer: ,B50: D. Callahan: Quick Wins for Better Website Security,"T23:170 R. Vazquez: SASS me up, Scotty",,,
@@ -76,7 +76,7 @@ Sunday,16:45,20,B45: A. Strong: Lessons Learned in Teaching Python,B85: A. Chris
 Sunday,17:05,10,break 10,break 10,break 40,,,
 Sunday,17:15,20,"L44: C. Lambacher: Making Embeddable Web Widgets Without Iframes
 L74: J. Filipe: Single Artifact Deployments for Python Applications
-L43: A. Bourget: Building a Bitcoin service to buy movies, live.",B101: G. Ward: Go for Python Hackers,,,,
+L??:",B101: G. Ward: Go for Python Hackers,,,,
 Sunday,17:35,10,break 10,break 10,,,,
 Sunday,17:45,35,M:35 Closing Ceremonies,,,,,
 Sunday,18:20,,SEEYA,,,,,
