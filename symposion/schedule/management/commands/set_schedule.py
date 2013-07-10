@@ -70,13 +70,9 @@ def create_talk(day, time, length, room, id_, kind=None, fullwidth=False):
         proposal_base=proposal,
         section=talk_section,
     )
-    #    additional_speakers=[
-    #        s
-    #        for s in proposal.additional_speakers.all()
-    #        if s.status == 2
-    #    ],
     presentation.save()
-
+    for s in proposal.additional_speakers.all():
+        presentation.additional_speakers.add(s)
 
 
 slot_id = autoincrement(start=1000)
