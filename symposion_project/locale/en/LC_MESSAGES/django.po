@@ -309,6 +309,19 @@ msgstr ""
 "those experiencing harassment to feel safe for the duration of the "
 "conference. We value your attendance. "
 
+#: templates/conduct.html:32
+msgid "Attribution"
+msgstr ""
+
+#: templates/conduct.html:33
+msgid "CONDUCT_ATTRIBUTION"
+msgstr "This anti-harassment policy is based on the <a href=\"http://"
+"geekfeminism.wikia.com/wiki/Conference_anti-harassment\"> example policy"
+"</a> from the Geek Feminism wiki, created by the Ada Initiative and other "
+"volunteers. It is used under the terms of the <a href=\"https://"
+"creativecommons.org/publicdomain/zero/1.0/\">Creative Commons Zero</a> "
+"license."
+
 #: templates/contact.html:16
 msgid "CONTACT_US_MAILING_LISTS"
 msgstr ""
