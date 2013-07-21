@@ -6200,6 +6200,21 @@ h4, legend {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   text-shadow: none;
 }
+#pyladies {
+  background: #ff6666 url('../img/pink-bg.jpg') top left repeat;
+  margin: 35px auto 0;
+  padding: 20px;
+  width: 80%;
+  max-width: 920px;
+  margin-bottom: 3em;
+}
+#pyladies h4 {
+  font-size: 3em;
+  line-height: 1.4em;
+  text-align: left;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
 #sponsors {
   background: #ffffff url('../img/snake-bg.jpg') top left repeat;
   padding-top: 35px;

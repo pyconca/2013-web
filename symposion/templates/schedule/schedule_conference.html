@@ -24,6 +24,22 @@
       {% for timetable in section.days %}
         <h2 id="{{ timetable.day.date|date:"Y-m-d" }}">{{ section.schedule.section.name }} — {{ timetable.day.date|date:"l F j" }}</h2>
       {% include "schedule/_grid.html" %}
+      {# Candidate for "Most Grotesque Hack Ever" #}
+      {% if timetable.day.date.day == 10 %}
+
+      <div class="span12">
+        <div id="pyladies">
+          <a href="http://www.pyladies.com/"><img style="float:right;" width="325" src="{{STATIC_URL}}/img/pyladies_logo.png" alt="PyLadies" /></a>
+          <h4>{% trans "PyLadies Social" %}</h4>
+          {% blocktrans %}<p>Come join <a href="http://www.pyladies.com/">PyLadies</a> for a social evening on Saturday, August 10th from 9pm–12am at <a href="http://cafe.art-square.ca/Art_Square_Cafe/CAFE_MAIN.html">Art Square Café</a>, a <a href="http://goo.gl/maps/wDUia">short walk</a> from the PyCon Venue.</p>{% endblocktrans %}
+          {% blocktrans %}<p>We’ll have appetizers and sangria available for attendees. A huge thank you to <a href="https://www.heroku.com/">Heroku</a> and PyCon Canada for sponsoring and organizing this event!</p>{% endblocktrans %}
+          {% blocktrans %}<p>Women conference attendees and their plus one (of either gender) are welcome.</p>{% endblocktrans %}
+          {% blocktrans %}<p><a href="http://pyladies-at-pyconca.eventbrite.com/">Register for the PyLadies Social at Art Square »</a></p>{% endblocktrans %}
+          <div style="clear: both;"></div>
+        </div>
+      </div>
+
+      {% endif %}
       {% endfor %}
     {% endcache %}
   {% endfor %}
@@ -42,7 +58,7 @@
           <a href="http://trizpug.org/boot-camp/torpy13/"><img style="float:right;" src="{{STATIC_URL}}/img/sponsors/torpy13-date.png" alt="PyCamp 2013 Toronto" /></a>
           <h4>{% trans "Toronto PyCamp" %}</h4>
           {% blocktrans %}<p><a href="http://trizpug.org/boot-camp/torpy13/">Toronto PyCamp</a>: Monday through Friday, August 12-16, 2013</p><p>PyCamp teams with the second PyCon Canada Conference! Toronto PyCamp and the PyCon Canada Conference happen on the campus of the University of Toronto. Go to the PyCon Canada weekend to see the amazing things Python can do for you, then experience a week of PyCamp.</p>{% endblocktrans %}
-          <div style="clear: both;" />
+          <div style="clear: both;"></div>
         </div>
       </div>
     </div>
