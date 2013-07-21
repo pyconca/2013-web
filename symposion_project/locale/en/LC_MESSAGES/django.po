@@ -789,14 +789,6 @@ msgstr ""
 msgid "VENUE_PARKING"
 msgstr "Parking details TBA."
 
-#: templates/venue.html:43
-msgid "Food"
-msgstr ""
-
-#: templates/venue.html:44
-msgid "VENUE_FOOD"
-msgstr "TBA"
-
 #: templates/venue.html:46
 msgid "Hotel"
 msgstr ""
@@ -842,11 +834,23 @@ msgstr ""
 "%20finding%%20a%%20room!\">organizers@pycon.ca</a> if you run into any "
 "trouble reserving your room, or finding someone to share a room with."
 
-#: templates/venue.html:66
+#: templates/venue.html:63
+msgid "Food"
+msgstr ""
+
+#: templates/venue.html:65
+msgid ""
+"Lunch will be provided on Saturday and Sunday, so make sure you let us "
+"know about any dietary restrictions. For other meals, there are a number of "
+"<a href=\"https://www.google.com/maps?q=Food+near+89+Chestnut+St.+Toronto\">"
+"food options in the neighbourhood</a>."
+msgstr ""
+
+#: templates/venue.html:71
 msgid "What to do in Toronto"
 msgstr ""
 
-#: templates/venue.html:67
+#: templates/venue.html:72
 msgid ""
 "<a href=\"http://www.mytorontomeeting.com/\">Tourism Toronto's website</a> "
 "has information on things to see and do in Toronto, as well as a \"Deals\" "
