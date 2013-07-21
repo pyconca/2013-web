@@ -811,7 +811,8 @@ msgstr ""
 msgid "HOTEL_RESERVATION_PHONE"
 msgstr ""
 "To make a reservation over the phone, please call 416-977-0707 between the "
-"hours of 9am and 7pm Eastern time and mention code &ldquo;1308PYCONCA&rdquo;."
+"hours of 9am and 7pm Eastern time and mention code &ldquo;1308PYCONCA&rdquo;. "
+"Hotel rates should be approximately $99/night."
 
 #: templates/venue.html:58
 msgid "HOTEL_RESERVATION_WEB"
