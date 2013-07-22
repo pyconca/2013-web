@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-23 02:26-0400\n"
+"POT-Creation-Date: 2013-07-21 20:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
-#: settings.py:112
+#: settings.py:113
 msgid "English"
 msgstr "anglais"
 
-#: settings.py:113
+#: settings.py:114
 msgid "French"
 msgstr "français"
 
@@ -91,38 +91,38 @@ msgid "Powered by"
 msgstr ""
 
 #: templates/_footer.html:60 templates/about.html:5 templates/about.html.py:11
-#: templates/site_base.html:38
+#: templates/site_base.html:39
 msgid "About"
 msgstr "À propos"
 
 #: templates/_footer.html:61 templates/homepage.html:42
-#: templates/site_base.html:39 templates/venue.html:5
+#: templates/site_base.html:40 templates/venue.html:5
 #: templates/venue.html.py:11
 msgid "Venue"
 msgstr "Lieu"
 
 #: templates/_footer.html:62 templates/homepage.html:47
-#: templates/site_base.html:40
+#: templates/site_base.html:41
 msgid "Schedule"
 msgstr "Horaire"
 
 #: templates/_footer.html:63 templates/homepage.html:30
-#: templates/site_base.html:41 templates/speak.html:6
+#: templates/site_base.html:42 templates/speak.html:6
 msgid "Speak"
 msgstr "Présenter"
 
 #: templates/_footer.html:64 templates/homepage.html:35 templates/learn.html:5
-#: templates/site_base.html:42
+#: templates/site_base.html:43
 msgid "Learn"
 msgstr "Apprendre"
 
-#: templates/_footer.html:65 templates/site_base.html:43
+#: templates/_footer.html:65 templates/site_base.html:44
 msgid "Sponsors"
 msgstr "Sponsors"
 
 #: templates/_footer.html:66 templates/contact.html:6
 #: templates/contact.html.py:9 templates/contact.html:15
-#: templates/site_base.html:44
+#: templates/site_base.html:45
 msgid "Contact"
 msgstr "Contact"
 
@@ -218,12 +218,57 @@ msgid ""
 "If you'd like to speak at PyCon Canada, submissions are due June 21, 2013."
 msgstr ""
 
-#: templates/about.html:50 templates/conduct.html:6
+#: templates/about.html:50
+msgid "Educator Grants"
+msgstr ""
+
+#: templates/about.html:52
+msgid ""
+"If you are a highschool educator in computer science or a related field, we "
+"would invite you to apply for one of our \"educator grants\" by contacting "
+"us at <a href=\"mailto:board@pycon.ca\">board@pycon.ca</a> and:"
+msgstr ""
+
+#: templates/about.html:55
+msgid "Telling us a bit about yourself"
+msgstr ""
+
+#: templates/about.html:56
+msgid "Supplying a short paragraph on why you would like to attend"
+msgstr ""
+
+#: templates/about.html:57
+msgid ""
+"Giving your estimated cost of travel to and from Toronto for the period of "
+"Aug 9-11th, 2013 (i.e. cost of your transportation only)"
+msgstr ""
+
+#: templates/about.html:60
+msgid ""
+"We are especially interested in applications from teachers who are from "
+"remote communities or who would otherwise have difficulty accessing and "
+"attending a top-tier tech conference in North America."
+msgstr ""
+
+#: templates/about.html:62
+msgid ""
+"We hope that by attending PyCon Canada 2013, highschool educators can take "
+"the lessons learned and relationships forged at our conference and "
+"disseminate them to their students and colleagues in their home communities."
+msgstr ""
+
+#: templates/about.html:64
+msgid ""
+"If you have any questions about this program, please don't be shy&mdash;"
+"contact us at <a href=\"mailto:board@pycon.ca\">board@pycon.ca</a>!"
+msgstr ""
+
+#: templates/about.html:66 templates/conduct.html:6
 #: templates/conduct.html.py:9 templates/conduct.html:15
 msgid "Code of Conduct"
 msgstr "Code de conduite"
 
-#: templates/about.html:52
+#: templates/about.html:68
 #, python-format
 msgid ""
 "<p>The PyCon Canada organizing team is committed to creating a safe and "
@@ -326,6 +371,14 @@ msgstr ""
 "loi, fournir des escortes, ou assister en toute autre manière ceux étant la "
 "cible d'harcèlement afin qu'ils se sentent en sécurité pendant la "
 "conférence. Nous apprécions votre présence. "
+
+#: templates/conduct.html:32
+msgid "Attribution"
+msgstr ""
+
+#: templates/conduct.html:33
+msgid "CONDUCT_ATTRIBUTION"
+msgstr ""
 
 #: templates/contact.html:16
 msgid "CONTACT_US_MAILING_LISTS"
@@ -446,33 +499,70 @@ msgstr ""
 "Une place pour annoncer nos conférenciers vedettes, un à la fois, dans les "
 "semaines qui suivent."
 
-#: templates/site_base.html:26
+#: templates/schedule_conference_tba.html:7
+#: templates/schedule_conference_tba.html:16
+msgid "Conference Schedule"
+msgstr "Horaire de la conférence"
+
+#: templates/schedule_conference_tba.html:26
+#: templates/schedule_conference_tba.html:30
+#, python-format
+msgid "<a href=\"%(sprints_url)s\">Development Sprints</a>"
+msgstr ""
+
+#: templates/schedule_conference_tba.html:28 templates/sprints.html:14
+msgid "SPRINT_WHAT"
+msgstr ""
+"<p>Les Sprints de développement à PyCon sont deux jours intensifs "
+"d'apprentissage et de développement sur des projets open-source de votre "
+"choix, dans un environnement où l'on fait équipe. C'est un temps pour se "
+"réunir entre collègues, anciens et nouveaux, afin de partager ce que vous "
+"avez appris et l'appliquer à un projet open-source.</p><p>PyCon fournit "
+"l'espace et l'infrastructure (réseau, alimentation, tables et chaises); vous "
+"apportez vos compétences, l'humanité, et l'intelligence (oh, n'oubliez pas "
+"votre ordinateur).</p>"
+
+#: templates/schedule_conference_tba.html:36
+msgid "Toronto PyCamp"
+msgstr ""
+
+#: templates/schedule_conference_tba.html:37
+msgid ""
+"<p><a href=\"http://trizpug.org/boot-camp/torpy13/\">Toronto PyCamp</a>: "
+"Monday through Friday, August 12-16, 2013</p><p>PyCamp teams with the second "
+"PyCon Canada Conference! Toronto PyCamp and the PyCon Canada Conference "
+"happen on the campus of the University of Toronto. Go to the PyCon Canada "
+"weekend to see the amazing things Python can do for you, then experience a "
+"week of PyCamp.</p>"
+msgstr ""
+
+#: templates/site_base.html:27
 msgid "PyCon Canada 2013"
 msgstr "PyCon Canada 2013"
 
-#: templates/site_base.html:70 templates/account/signup.html:7
+#: templates/site_base.html:71 templates/account/signup.html:7
 #: templates/account/signup.html.py:12 templates/account/signup.html:20
 msgid "Sign up"
 msgstr "Inscription"
 
-#: templates/site_base.html:72 templates/account/login.html:7
+#: templates/site_base.html:73 templates/account/login.html:7
 #: templates/account/login.html.py:19
 msgid "Log in"
 msgstr "Connexion"
 
-#: templates/site_base.html:74
+#: templates/site_base.html:75
 msgid "Dashboard"
 msgstr "Panneau de contrôle"
 
-#: templates/site_base.html:76
+#: templates/site_base.html:77
 msgid "Settings"
 msgstr "Configuration"
 
-#: templates/site_base.html:78 templates/account/logout.html:7
+#: templates/site_base.html:79 templates/account/logout.html:7
 msgid "Log out"
 msgstr "Se déconnecter"
 
-#: templates/site_base.html:104
+#: templates/site_base.html:105
 msgid "Buy a ticket"
 msgstr "Acheter un billet"
 
@@ -613,18 +703,6 @@ msgstr ""
 #: templates/sprints.html:12
 msgid "Monday, August 12th and Tuesday, August 13th, 2012."
 msgstr ""
-
-#: templates/sprints.html:14 templates/schedule/schedule_conference.html:28
-msgid "SPRINT_WHAT"
-msgstr ""
-"<p>Les Sprints de développement à PyCon sont deux jours intensifs "
-"d'apprentissage et de développement sur des projets open-source de votre "
-"choix, dans un environnement où l'on fait équipe. C'est un temps pour se "
-"réunir entre collègues, anciens et nouveaux, afin de partager ce que vous "
-"avez appris et l'appliquer à un projet open-source.</p><p>PyCon fournit "
-"l'espace et l'infrastructure (réseau, alimentation, tables et chaises); vous "
-"apportez vos compétences, l'humanité, et l'intelligence (oh, n'oubliez pas "
-"votre ordinateur).</p>"
 
 #: templates/sprints.html:16
 msgid "What's the schedule?"
@@ -817,31 +895,23 @@ msgid "VENUE_PARKING"
 msgstr "Les détails de stationnement seront disponible plus tard."
 
 #: templates/venue.html:43
-msgid "Food"
-msgstr "Restaurants"
-
-#: templates/venue.html:44
-msgid "VENUE_FOOD"
-msgstr "À être déterminé."
-
-#: templates/venue.html:46
 msgid "Hotel"
 msgstr "Hôtel"
 
-#: templates/venue.html:47
+#: templates/venue.html:44
 msgid ""
 "The recommended hotel for PyCon Canada is the conference venue, the Chestnut "
 "Residence"
 msgstr ""
 "PyCon Canda recommande l'hôtel même de la conférence : le Chestnut Residence."
 
-#: templates/venue.html:56
+#: templates/venue.html:53
 msgid "HOTEL_RESERVATION_PHONE"
 msgstr ""
 "Pour faire une réservation par téléphone, appelez le +1 416-977-0707 de 9h à "
 "19h (HAE) et mentionnez le code &ldquo;1308PYCONCA&rdquo;."
 
-#: templates/venue.html:58
+#: templates/venue.html:55
 msgid "HOTEL_RESERVATION_WEB"
 msgstr ""
 "Pour faire une réservation par Internet, rendez-vous au <a href=\"https://"
@@ -851,14 +921,14 @@ msgstr ""
 "requiert un compte sur ce système. La date limite pour le code du groupe est "
 "le 9 juillet 2013."
 
-#: templates/venue.html:60
+#: templates/venue.html:57
 msgid "HOTEL_RESERVATION_CONTACT"
 msgstr ""
 "Vous pouvez contacter la résendence par courriel à l'adresse suivante : <a "
 "href=\"mailto:frontdesk.chestnut@utoronto.ca\">frontdesk.chestnut@utoronto."
 "ca</a>."
 
-#: templates/venue.html:62
+#: templates/venue.html:59
 msgid "HOTEL_ROOM_SHARING"
 msgstr ""
 "Si vous voulez partagez votre chambre avec un autre participant de PyCon "
@@ -866,18 +936,32 @@ msgstr ""
 "pyconca/2013-wiki/wiki/Room-Sharing\">wiki de partage de chambre</a> de "
 "PyCon Canada."
 
-#: templates/venue.html:64
+#: templates/venue.html:61
 msgid "HOTEL_TROUBLE"
 msgstr ""
 "Contactez-nous si vous avez des problèmes avec la réservation d'une  chambre "
 "à : <a href=\"mailto:organizers@pycon.ca?subject=I%%20need%%20help%%20finding"
 "%%20a%%20room!\">organizers@pycon.ca</a>."
 
-#: templates/venue.html:66
+#: templates/venue.html:63
+msgid "Food"
+msgstr "Restaurants"
+
+#: templates/venue.html:64
+msgid ""
+"\n"
+"Lunch will be provided on Saturday and Sunday, so make sure you let us\n"
+"know about any dietary restrictions. For other meals, there are a number of\n"
+"<a href=\"https://www.google.com/maps?q=Food+near+89+Chestnut+St.+Toronto"
+"\">\n"
+"food options in the neighbourhood</a>.\n"
+msgstr ""
+
+#: templates/venue.html:71
 msgid "What to do in Toronto"
 msgstr ""
 
-#: templates/venue.html:67
+#: templates/venue.html:72
 msgid ""
 "<a href=\"http://www.mytorontomeeting.com/\">Tourism Toronto's website</a> "
 "has information on things to see and do in Toronto, as well as a \"Deals\" "
@@ -955,30 +1039,8 @@ msgstr ""
 "directement avec nous : <a href=\"mailto:organizers@pycon.ca"
 "\">organizers@pycon.ca</a>."
 
-#: templates/schedule/schedule_conference.html:7
-#: templates/schedule/schedule_conference.html:16
-msgid "Conference Schedule"
-msgstr "Horaire de la conférence"
-
-#: templates/schedule/schedule_conference.html:26
-#: templates/schedule/schedule_conference.html:30
-#, python-format
-msgid "<a href=\"%(sprints_url)s\">Development Sprints</a>"
-msgstr ""
-
-#: templates/schedule/schedule_conference.html:36
-msgid "Toronto PyCamp"
-msgstr ""
-
-#: templates/schedule/schedule_conference.html:37
-msgid ""
-"<p><a href=\"http://pycamp.org/boot-camp/torpy13/\">Toronto PyCamp</a>: "
-"Monday through Friday, August 12-16, 2013</p><p>PyCamp teams with the second "
-"PyCon Canada Conference! Toronto PyCamp and the PyCon Canada Conference "
-"happen on the campus of the University of Toronto. Go to the PyCon Canada "
-"weekend to see the amazing things Python can do for you, then experience a "
-"week of PyCamp.</p>"
-msgstr ""
+#~ msgid "VENUE_FOOD"
+#~ msgstr "À être déterminé."
 
 #~ msgid "Name"
 #~ msgstr "Nom"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-23 02:57-0400\n"
+"POT-Creation-Date: 2013-07-21 20:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -300,15 +300,15 @@ msgstr ""
 msgid "My Assignments"
 msgstr ""
 
-#: templates/dashboard.html:144
+#: templates/dashboard.html:163
 msgid "Teams"
 msgstr ""
 
-#: templates/dashboard.html:149
+#: templates/dashboard.html:168
 msgid "Your Teams"
 msgstr ""
 
-#: templates/dashboard.html:170
+#: templates/dashboard.html:189
 msgid "Available Teams"
 msgstr ""
 
@@ -419,10 +419,12 @@ msgid "Invitation Sent"
 msgstr ""
 
 #: templates/proposals/_proposal_fields.html:28
+#: templates/schedule/presentation_detail.html:34
 msgid "Description"
 msgstr ""
 
 #: templates/proposals/_proposal_fields.html:31
+#: templates/schedule/presentation_detail.html:38
 msgid "Abstract"
 msgstr ""
 
@@ -614,9 +616,93 @@ msgstr ""
 msgid "Edit Slot"
 msgstr ""
 
+#: templates/schedule/presentation_detail.html:7
+msgid "Presentation:"
+msgstr ""
+
+#: templates/schedule/presentation_detail.html:16
+#: templates/speakers/speaker_profile.html:32
+msgid "in"
+msgstr ""
+
+#: templates/schedule/presentation_detail.html:30
+msgid "Audience level:"
+msgstr ""
+
 #: templates/schedule/schedule_conference.html:7
 #: templates/schedule/schedule_conference.html:16
 msgid "Conference Schedule"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:19
+msgid "Friday August 9"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:20
+msgid "Evening social event."
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:33
+msgid "PyLadies Social"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:34
+msgid ""
+"<p>Come join <a href=\"http://www.pyladies.com/\">PyLadies</a> for a social "
+"evening on Saturday, August 10th from 9pm–12am at <a href=\"http://cafe.art-"
+"square.ca/Art_Square_Cafe/CAFE_MAIN.html\">Art Square Café</a>, a <a href="
+"\"http://goo.gl/maps/wDUia\">short walk</a> from the PyCon Venue.</p>"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:35
+msgid ""
+"<p>We’ll have appetizers and sangria available for attendees. A huge thank "
+"you to <a href=\"https://www.heroku.com/\">Heroku</a> and PyCon Canada for "
+"sponsoring and organizing this event!</p>"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:36
+msgid ""
+"<p>Women conference attendees and their plus one (of either gender) are "
+"welcome.</p>"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:37
+msgid ""
+"<p><a href=\"http://pyladies-at-pyconca.eventbrite.com/\">Register for the "
+"PyLadies Social at Art Square »</a></p>"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:47
+msgid "Sprints — Monday August 12"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:49
+#: templates/schedule/schedule_conference.html:53
+#, python-format
+msgid "<a href=\"%(sprints_url)s\">Development Sprints</a>"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:51
+msgid "SPRINT_WHAT"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:52
+msgid "Sprints — Tuesday August 13"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:59
+msgid "Toronto PyCamp"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:60
+msgid ""
+"<p><a href=\"http://trizpug.org/boot-camp/torpy13/\">Toronto PyCamp</a>: "
+"Monday through Friday, August 12-16, 2013</p><p>PyCamp teams with the second "
+"PyCon Canada Conference! Toronto PyCamp and the PyCon Canada Conference "
+"happen on the campus of the University of Toronto. Go to the PyCon Canada "
+"weekend to see the amazing things Python can do for you, then experience a "
+"week of PyCamp.</p>"
 msgstr ""
 
 #: templates/speakers/speaker_create.html:6
@@ -627,6 +713,16 @@ msgstr ""
 #: templates/speakers/speaker_edit.html:6
 #: templates/speakers/speaker_edit.html:12
 msgid "Edit Speaker Profile"
+msgstr ""
+
+#: templates/speakers/speaker_profile.html:25
+msgid "Presentations"
+msgstr ""
+
+#: templates/speakers/speaker_profile.html:37
+msgid ""
+"No presentations. This page is only visible to staff until there is a "
+"presentation."
 msgstr ""
 
 #: templates/sponsorship/add.html:6 templates/sponsorship/add.html.py:13
