@@ -780,14 +780,17 @@ msgstr ""
 #: templates/venue.html:40
 msgid "VENUE_PUBLIC_TRANSIT"
 msgstr ""
-"The nearest <a href=\"http://ttc.ca/\">TTC</a> subway stop is St. Patrick "
-"Station, on the Yonge-Univeristy-Spadina line. Dundas streetcars also stop "
-"at Chestnut Street. Cash fare is $3, or tokens can be purchased at "
-"discounted rates."
+"The nearest <a href=\"http://ttc.ca/\">TTC</a> subway stops are St. Patrick "
+"Station and Dundas Station, both on the Yonge-University-Spadina line. "
+"Dundas Street streetcars also stop at Chestnut Street. Cash fare is $3, or "
+"multiple tokens can be purchased at discounted rates."
 
 #: templates/venue.html:41
 msgid "VENUE_PARKING"
-msgstr "Parking details TBA."
+msgstr ""
+"The closest municipal parking (Green P) lots are the Toronto Coach Terminal "
+"at 130 Elizabeth Street and the Nathan Phillips Square Garage at 10 Queen "
+"Street West."
 
 #: templates/venue.html:43
 msgid "Food"
