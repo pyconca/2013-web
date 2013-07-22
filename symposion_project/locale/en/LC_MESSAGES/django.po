@@ -781,9 +781,9 @@ msgstr ""
 msgid "VENUE_PUBLIC_TRANSIT"
 msgstr ""
 "The nearest <a href=\"http://ttc.ca/\">TTC</a> subway stops are St. Patrick "
-"Station and Dundas Station, both on the Yonge-Univeristy-Spadina line. "
-"Dundas St. streetcars also stop at Chestnut Street. Cash fare is $3, or "
-"tokens can be purchased at discounted rates."
+"Station and Dundas Station, both on the Yonge-University-Spadina line. "
+"Dundas Street streetcars also stop at Chestnut Street. Cash fare is $3, or "
+"multiple tokens can be purchased at discounted rates."
 
 #: templates/venue.html:41
 msgid "VENUE_PARKING"
