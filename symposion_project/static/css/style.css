@@ -5801,6 +5801,10 @@ a.badge:hover {
   #buy .btn {
     left: 20% !important;
   }
+  #buy .callout {
+    left: 20% !important;
+    width: auto !important;
+  }
   #sponsors h3 {
     line-height: 1em !important;
   }
@@ -6052,6 +6056,27 @@ h4, legend {
   position: absolute;
   right: 12.5%;
   top: 40px;
+  text-transform: uppercase;
+  font-family: Rockwell, "Rokkitt", "Courier Bold", "Trebuchet MS", serif;
+  letter-spacing: 2px;
+}
+#buy .callout {
+  text-align: center;
+  width: 180px;
+  color: #ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+  /* for Safari */
+
+  background-clip: padding-box;
+  /* for IE9+, Firefox 4+, Opera, Chrome */
+
+  font-size: 1.8461em;
+  padding: 12px 40px;
+  line-height: 1.5em;
+  position: absolute;
+  right: 12.5%;
+  top: 100px;
   text-transform: uppercase;
   font-family: Rockwell, "Rokkitt", "Courier Bold", "Trebuchet MS", serif;
   letter-spacing: 2px;
