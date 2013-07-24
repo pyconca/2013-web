@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-21 20:29-0400\n"
+"POT-Creation-Date: 2013-07-23 21:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -909,7 +909,7 @@ msgstr ""
 msgid "HOTEL_RESERVATION_PHONE"
 msgstr ""
 "Pour faire une réservation par téléphone, appelez le +1 416-977-0707 de 9h à "
-"19h (HAE) et mentionnez le code &ldquo;1308PYCONCA&rdquo;."
+"19h (HAE) et mentionnez le code &ldquo;1308PYCONCA&rdquo;. $ 99 par nuit."
 
 #: templates/venue.html:55
 msgid "HOTEL_RESERVATION_WEB"
@@ -919,16 +919,24 @@ msgstr ""
 "R=1234976191\">sur le système de réservation en ligne</a>. Le code "
 "d'approbation est &ldquo;1308PYCONCA&rdquo;. Le processus de réservation "
 "requiert un compte sur ce système. La date limite pour le code du groupe est "
-"le 9 juillet 2013."
+"le 3 aôut 2013. Après cela, vous devez appeler le numéro ci-dessus, avec des "
+"taux en fonction du volume de réservation."
 
 #: templates/venue.html:57
+msgid "HOTEL_TIME_SPAN"
+msgstr ""
+"Le code est valable pour les réservations entre août 6-12, inclusivement. "
+"Pour les réservations en dehors de cette plage, téléphoner à l'hôtel. Du "
+"temps supplémentaire peut ne pas être au prix de conférence."
+
+#: templates/venue.html:59
 msgid "HOTEL_RESERVATION_CONTACT"
 msgstr ""
 "Vous pouvez contacter la résendence par courriel à l'adresse suivante : <a "
 "href=\"mailto:frontdesk.chestnut@utoronto.ca\">frontdesk.chestnut@utoronto."
 "ca</a>."
 
-#: templates/venue.html:59
+#: templates/venue.html:61
 msgid "HOTEL_ROOM_SHARING"
 msgstr ""
 "Si vous voulez partagez votre chambre avec un autre participant de PyCon "
@@ -936,18 +944,18 @@ msgstr ""
 "pyconca/2013-wiki/wiki/Room-Sharing\">wiki de partage de chambre</a> de "
 "PyCon Canada."
 
-#: templates/venue.html:61
+#: templates/venue.html:63
 msgid "HOTEL_TROUBLE"
 msgstr ""
 "Contactez-nous si vous avez des problèmes avec la réservation d'une  chambre "
 "à : <a href=\"mailto:organizers@pycon.ca?subject=I%%20need%%20help%%20finding"
 "%%20a%%20room!\">organizers@pycon.ca</a>."
 
-#: templates/venue.html:63
+#: templates/venue.html:65
 msgid "Food"
 msgstr "Restaurants"
 
-#: templates/venue.html:64
+#: templates/venue.html:66
 msgid ""
 "\n"
 "Lunch will be provided on Saturday and Sunday, so make sure you let us\n"
@@ -957,11 +965,11 @@ msgid ""
 "food options in the neighbourhood</a>.\n"
 msgstr ""
 
-#: templates/venue.html:71
+#: templates/venue.html:73
 msgid "What to do in Toronto"
 msgstr ""
 
-#: templates/venue.html:72
+#: templates/venue.html:74
 msgid ""
 "<a href=\"http://www.mytorontomeeting.com/\">Tourism Toronto's website</a> "
 "has information on things to see and do in Toronto, as well as a \"Deals\" "

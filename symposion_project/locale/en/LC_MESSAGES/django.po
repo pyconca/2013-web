@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-21 20:29-0400\n"
+"POT-Creation-Date: 2013-07-23 21:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -899,33 +899,41 @@ msgstr ""
 "quokkatraveltools.nucleus.com/HotelResSys/SignIn/CustWelcome.cfm?P=417&amp;"
 "R=1234976191\">online reservation system</a>. The approval code is "
 "&ldquo;1308PYCONCA&rdquo;. Follow the reservation process by creating a new "
-"account. The cut off date for the group rate is July 9, 2013."
+"account. The cut off date for the group rate is August 3, 2013. After that, "
+"you'll have to call the number above, with rates depending on booking volume."
 
 #: templates/venue.html:57
+msgid "HOTEL_TIME_SPAN"
+msgstr ""
+"The booking code allows you to book a stay between August 6 and 12, "
+"inclusive. If you require lodging outside those dates, you must call to "
+"reserve, and the extra time may not be at the conference rate."
+
+#: templates/venue.html:59
 msgid "HOTEL_RESERVATION_CONTACT"
 msgstr ""
 "You can also contact the residence by emailing <a href=\"mailto:frontdesk."
 "chestnut@utoronto.ca\">frontdesk.chestnut@utoronto.ca</a>."
 
-#: templates/venue.html:59
+#: templates/venue.html:61
 msgid "HOTEL_ROOM_SHARING"
 msgstr ""
 "If you would like to share a hotel room with someone else attending the "
 "conference, please see the PyCon Canada <a href=\"https://github.com/"
 "pyconca/2013-wiki/wiki/Room-Sharing\">room sharing wiki</a> page."
 
-#: templates/venue.html:61
+#: templates/venue.html:63
 msgid "HOTEL_TROUBLE"
 msgstr ""
 "Email <a href=\"mailto:organizers@pycon.ca?subject=I%%20need%%20help%"
 "%20finding%%20a%%20room!\">organizers@pycon.ca</a> if you run into any "
 "trouble reserving your room, or finding someone to share a room with."
 
-#: templates/venue.html:63
+#: templates/venue.html:65
 msgid "Food"
 msgstr ""
 
-#: templates/venue.html:64
+#: templates/venue.html:66
 msgid ""
 "\n"
 "Lunch will be provided on Saturday and Sunday, so make sure you let us\n"
@@ -935,11 +943,11 @@ msgid ""
 "food options in the neighbourhood</a>.\n"
 msgstr ""
 
-#: templates/venue.html:71
+#: templates/venue.html:73
 msgid "What to do in Toronto"
 msgstr ""
 
-#: templates/venue.html:72
+#: templates/venue.html:74
 msgid ""
 "<a href=\"http://www.mytorontomeeting.com/\">Tourism Toronto's website</a> "
 "has information on things to see and do in Toronto, as well as a \"Deals\" "
