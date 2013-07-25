@@ -1,4 +1,6 @@
-from django.http import Http404
+import json
+
+from django.http import Http404, HttpResponse
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template import RequestContext
 
@@ -83,3 +85,24 @@ def sponsor_detail(request, pk):
         "form": form,
         "formset": formset,
     }, context_instance=RequestContext(request))
+
+
+def sponsors_json(request):
+    sponsors = []
+    for sponsor in Sponsor.objects.filter(active=True):
+        sponsor_desc = sponsor.sponsor_benefits.get(active=True, id=3)
+        sponsor_logo = sponsor.sponsor_benefits.get(active=True, id=1)
+        sponsors.append({
+            "id": sponsor.id,
+            "name": sponsor.name,
+            "level": sponsor.level.name,
+            "website": sponsor.external_url,
+            "description": sponsor_desc.text if sponsor_desc else None,
+            "logo": request.build_absolute_uri(sponsor_logo.upload.url)
+                if sponsor_logo and sponsor_logo.upload else None
+        })
+
+    return HttpResponse(
+        json.dumps({"sponsors": sponsors}, ensure_ascii=False).encode("utf-8"),
+        content_type="application/json; charset=utf-8"
+    )
