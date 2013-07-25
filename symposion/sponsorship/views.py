@@ -103,6 +103,6 @@ def sponsors_json(request):
         })
 
     return HttpResponse(
-        json.dumps({"sponsors": sponsors}, ensure_ascii=False).encode("utf-8"),
-        content_type="application/json; charset=utf-8"
+        json.dumps({"sponsors": sponsors}),
+        content_type="application/json"
     )
