@@ -90,8 +90,14 @@ def sponsor_detail(request, pk):
 def sponsors_json(request):
     sponsors = []
     for sponsor in Sponsor.objects.filter(active=True):
-        sponsor_desc = sponsor.sponsor_benefits.get(active=True, id=3)
-        sponsor_logo = sponsor.sponsor_benefits.get(active=True, id=1)
+        try:
+            sponsor_desc = sponsor.sponsor_benefits.get(active=True, id=3)
+        except SponsorBenefit.DoesNotExist:
+            sponsor_desc = None
+        try:
+            sponsor_logo = sponsor.sponsor_benefits.get(active=True, id=1)
+        except SponsorBenefit.DoesNotExist:
+            sponsor_logo = None
         sponsors.append({
             "id": sponsor.id,
             "name": sponsor.name,
