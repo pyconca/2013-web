@@ -114,6 +114,7 @@ tutorial_re = re.compile(r'^T(?P<id>\d+):(?P<length>\d+)')
 lunch_re = re.compile(r'^lunch')
 break_re = re.compile(r'^break (?P<length>\d+)')
 messages_re = re.compile(r'^M:(?P<length>\d+) (?P<message>.*)')
+one_room_message_re = re.compile(r'^X:(?P<length>\d+) (?P<message>.*)')
 
 
 def do_room(day, time, room, content):
@@ -127,6 +128,7 @@ def do_room(day, time, room, content):
     lunch = lunch_re.match(content)
     break_ = break_re.match(content)
     messages = messages_re.match(content)
+    one_room_message = one_room_message_re.match(content)
     if talk40:
         kind = SLOT_KINDS["talk40"]
         create_talk(day, time, 40, room, int(talk40.group('id')), kind=kind)
@@ -167,6 +169,9 @@ def do_room(day, time, room, content):
     elif messages:
         kind = SLOT_KINDS["messages"]
         create_slot(day, time, int(messages.group('length')), room, messages.group('message'), kind, fullwidth=True)
+    elif one_room_message:
+        kind = SLOT_KINDS["messages"]
+        create_slot(day, time, int(one_room_message.group('length')), room, one_room_message.group('message'), kind)
     else:
         print "UNKNOWN KIND:", talk40, talk, lightning, keynote, tutorial, lunch, break_, content
 
