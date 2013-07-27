@@ -1,5 +1,7 @@
+import json
+
 from django.core.exceptions import ObjectDoesNotExist
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
 from django.contrib import messages
@@ -134,3 +136,20 @@ def speaker_profile(request, pk):
         "speaker": speaker,
         "presentations": presentations,
     })
+
+
+def speakers_json(request):
+    speakers = []
+    for speaker in Speaker.objects.exclude(presentations=None):
+        speakers.append({
+            "id": speaker.id,
+            "name": speaker.name,
+            "bio": speaker.biography.rendered,
+            "photo": request.build_absolute_uri(speaker.photo.url)
+                if speaker.photo else None
+        })
+
+    return HttpResponse(
+        json.dumps({"speakers": speakers}),
+        content_type="application/json"
+    )
