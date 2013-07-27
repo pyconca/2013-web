@@ -133,6 +133,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "account.context_processors.account",
     "symposion.reviews.context_processors.reviews",
     "django_switchuser.context_processors.su_state",
+    "symposion_project.context_processors.current_utc_datetime",
 ]
 
 INSTALLED_APPS = [

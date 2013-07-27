@@ -103,7 +103,7 @@
             <div class="span12">
                 <div id="buy">
                   <button class="btn guestlist-event-161823" action="#">{% trans "Buy a ticket" %}</button>
-                  <div class="callout">{% trans "Sales close July 26th!" %}</div>
+                  <div class="callout">{% if current_utc_datetime > '2013-07-27T10' %}{% trans "Ticket sales CLOSED!" %}{% else %}{% trans "Last day of sales!" %}{% endif %}</div>
                 </div>
             </div>
         </div>
