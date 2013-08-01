@@ -44,6 +44,19 @@
     {% endcache %}
   {% endfor %}
 
+  <h2 id="youngcoders">{% trans "Young Coders Workshop — Saturday August 10 and Sunday August 11" %}</h2>
+  <p>{% blocktrans %}Learn how to remix and create your own websites, videos, and more with Mozilla's Webmaker tools at PyCon Canada's <a href="http://www.eventbrite.ca/event/7402829061">Maker Party for youth</a>! Check out some of the awesome "makes" that have been created using Webmaker's HTML &amp; CSS editing tool <a href="https://webmaker.org/tools">Thimble</a>, and the video-editing tool <a href="https://webmaker.org/tools">Popcorn Maker</a>:{% endblocktrans %}</p>
+  <ul>
+      <li><p><a href="https://bboyinteractive.makes.org/thimble/your-own-3d-gallery">3D Gallery</a></p></li>
+      <li><p><a href="https://webmaker.makes.org/thimble/create-your-own-comic-a-starter-make">Create your own comic</a></p></li>
+      <li><p><a href="https://webmaker.makes.org/thimble/make-a-gig-poster">A gig poster</a></p></li>
+      <li><p><a href="https://webmaker.makes.org/thimble/postcard-for-a-friend">Postcard</a></p></li>
+      <li><p><a href="https://awesome.makes.org/popcorn/16qf">Thumbs for guns</a></p></li>
+      <li><p><a href="http://shadowsontherun.makes.org/popcorn/181i">The name that celebrity as baby game</a></p></li>
+  </ul>
+  <p>{% trans "And did we mention it's free?! Just register via <a href=\"http://www.eventbrite.ca/event/7402829061\">Eventbrite!</a>" %}</p>
+  <p>{% trans "Youth will be able to make, create, and collaborate at this learning lab. Using a project-based approach, youth will learn through making with the help of some awesome mentors!" %}</p>
+
   <h2 id="2013-08-12">{% trans "Sprints — Monday August 12" %}</h2>
   {% url sprints as sprints_url %}
   <p>{% blocktrans with sprints_url=sprints_url %}<a href="{{ sprints_url }}">Development Sprints</a>{% endblocktrans %}</p>
