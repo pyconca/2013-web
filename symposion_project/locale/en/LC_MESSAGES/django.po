@@ -166,7 +166,7 @@ msgstr ""
 msgid "ABOUT_VOLUNTEERS"
 msgstr ""
 "PyCon Canada is entirely run by volunteers who are passionate about these "
-"goals. We hope to see you at the 2012 conference! "
+"goals. We hope to see you at the 2013 conference! "
 
 #: templates/about.html:31
 #, python-format
