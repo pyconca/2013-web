@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-23 21:20-0400\n"
+"POT-Creation-Date: 2013-08-02 17:18-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -565,6 +565,14 @@ msgstr "Se déconnecter"
 #: templates/site_base.html:105
 msgid "Buy a ticket"
 msgstr "Acheter un billet"
+
+#: templates/site_base.html:106
+msgid "Ticket sales CLOSED!"
+msgstr ""
+
+#: templates/site_base.html:106
+msgid "Last day of sales!"
+msgstr ""
 
 #: templates/speak.html:9
 msgid "Speakers"

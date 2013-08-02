@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-21 20:29-0400\n"
+"POT-Creation-Date: 2013-08-02 17:18-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -681,7 +681,10 @@ msgid "Friday August 9"
 msgstr ""
 
 #: templates/schedule/schedule_conference.html:20
-msgid "Evening social event."
+msgid ""
+"07:00PM–11:30PM: Registration and casual mixer. Come register, hang out, and "
+"meet other PyCon-goers! Food and drinks will be provided courtesy of <a href="
+"\"http://upverter.com/\">Upverter</a>, and the venue bar will be open!"
 msgstr ""
 
 #: templates/schedule/schedule_conference.html:33
@@ -716,28 +719,53 @@ msgid ""
 msgstr ""
 
 #: templates/schedule/schedule_conference.html:47
+msgid "Young Coders Workshop — Saturday August 10 and Sunday August 11"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:48
+msgid ""
+"Learn how to remix and create your own websites, videos, and more with "
+"Mozilla's Webmaker tools at PyCon Canada's <a href=\"http://www.eventbrite."
+"ca/event/7402829061\">Maker Party for youth</a>! Check out some of the "
+"awesome \"makes\" that have been created using Webmaker's HTML &amp; CSS "
+"editing tool <a href=\"https://webmaker.org/tools\">Thimble</a>, and the "
+"video-editing tool <a href=\"https://webmaker.org/tools\">Popcorn Maker</a>:"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:57
+msgid "And did we mention it's free?! Just register via <a href=\\"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:58
+msgid ""
+"Youth will be able to make, create, and collaborate at this learning lab. "
+"Using a project-based approach, youth will learn through making with the "
+"help of some awesome mentors!"
+msgstr ""
+
+#: templates/schedule/schedule_conference.html:60
 msgid "Sprints — Monday August 12"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:49
-#: templates/schedule/schedule_conference.html:53
+#: templates/schedule/schedule_conference.html:62
+#: templates/schedule/schedule_conference.html:66
 #, python-format
 msgid "<a href=\"%(sprints_url)s\">Development Sprints</a>"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:51
+#: templates/schedule/schedule_conference.html:64
 msgid "SPRINT_WHAT"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:52
+#: templates/schedule/schedule_conference.html:65
 msgid "Sprints — Tuesday August 13"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:59
+#: templates/schedule/schedule_conference.html:72
 msgid "Toronto PyCamp"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:60
+#: templates/schedule/schedule_conference.html:73
 msgid ""
 "<p><a href=\"http://trizpug.org/boot-camp/torpy13/\">Toronto PyCamp</a>: "
 "Monday through Friday, August 12-16, 2013</p><p>PyCamp teams with the second "

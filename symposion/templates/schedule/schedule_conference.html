@@ -17,7 +17,7 @@
   {% block breadcrumbs %}{% endblock %}
 
   <h2 id="2013-08-09">{% trans "Friday August 9" %}</h2>
-  <p>{% trans "07:00PM–11:30PM: Registration and casual mixer. Come register, hang out, and meet other PyCon-goers! Food and drinks will be provided courtesy of <a href=\"http://upverter.com/\">Upverter</a>, and the venue bar will be open!" %}</p>
+  <p>{% blocktrans %}07:00PM–11:30PM: Registration and casual mixer. Come register, hang out, and meet other PyCon-goers! Food and drinks will be provided courtesy of <a href="http://upverter.com/">Upverter</a>, and the venue bar will be open!{% endblocktrans %}</p>
 
   {% for section in sections %}
     {% cache 600 "schedule-table" section.schedule.section %}
