@@ -701,7 +701,7 @@ msgid "Development Sprints"
 msgstr ""
 
 #: templates/sprints.html:12
-msgid "Monday, August 12th and Tuesday, August 13th, 2012."
+msgid "Monday, August 12th and Tuesday, August 13th, 2013."
 msgstr ""
 
 #: templates/sprints.html:16
