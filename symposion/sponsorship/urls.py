@@ -9,5 +9,6 @@ urlpatterns = patterns("symposion.sponsorship.views",
     url(r"^apply/$", "sponsor_apply", name="sponsor_apply"),
     url(r"^add/$", "sponsor_add", name="sponsor_add"),
     url(r"^(?P<pk>\d+)/$", "sponsor_detail", name="sponsor_detail"),
+    url(r"^featured/(?P<sponsor>\w+)$", "sponsor_featured", name="sponsor_featured"),
     url(r"^sponsors.json$", cache_page(300)(sponsors_json), name="sponsors_json"),
 )
