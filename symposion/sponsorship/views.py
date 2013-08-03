@@ -87,6 +87,16 @@ def sponsor_detail(request, pk):
     }, context_instance=RequestContext(request))
 
 
+def sponsor_featured(request, sponsor):
+    if sponsor not in ["500px", "chango", "kontagent", "rackspace"]:
+        raise Http404()
+    return render_to_response(
+        "featured_sponsors/{}.html".format(sponsor),
+        {},
+        context_instance=RequestContext(request)
+    )
+
+
 def sponsors_json(request):
     sponsors = []
     for sponsor in Sponsor.objects.filter(active=True):
