@@ -79,26 +79,4 @@
 {% endblock %}
 
 {% block extra_script %}
-  <script>
-    /* Convert the tables to mobile-friendly divs */
-    $("table.calendar").each(function() {
-      var table = $(this);
-      var fakeTable = $("<div class='fake-table'></div>");
-      table.find("tbody tr").each(function() {
-        var fakeTr = $("<div class='fake-tr'></div>");
-        $(this).children().each(function() {
-          var cell = $(this);
-          if (cell.text().match(/^\s*$/))
-            return;
-          fakeTr.append(
-            $("<div class='fake-cell'></div>")
-              .html(cell.html())
-              .addClass("fake-" + cell.prop("tagName").toLowerCase())
-          );
-        });
-        fakeTable.append(fakeTr);
-      });
-      table.after(fakeTable);
-    });
-  </script>
 {% endblock %}
