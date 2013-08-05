@@ -6361,3 +6361,8 @@ span.speaker a {
   color: white;
   font-size: 1.0em;
 }
+#sponsor-qa-callout {
+    text-align: center;
+    font-size: 2em !important;
+    margin-bottom: 2em;
+}
