@@ -1,4 +1,4 @@
-<table class="calendar table table-bordered" id="schedule-conference">
+<table class="calendar table table-bordered">
     <thead>
         <tr>
             <th class="time">&nbsp;</th>
@@ -41,6 +41,7 @@
                         {% elif slot.content.pk == 23 %}
                             <br /><a href="https://github.com/pyconca/2013-wiki/wiki/Tutorials#sass-me-up-scotty">Sign up &raquo;</a>
                         {% endif %}
+                        <div class="talk-meta-phone">in {{ slot.rooms }}</div>
                     </td>
                 {% endfor %}
                 {% if forloop.last %}
