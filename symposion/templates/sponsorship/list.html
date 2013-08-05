@@ -9,8 +9,15 @@
 {% block body_class %}sponsorships{% endblock %}
 
 {% block one_column %}
+<h3>{% trans "Sponsor Q &amp; A" %}</h3>
+<p id="sponsor-qa-callout">
+    <a href="{% url sponsor_featured sponsor="500px" %}">500px</a> •
+    <a href="{% url sponsor_featured sponsor="chango" %}">Chango</a> •
+    <a href="{% url sponsor_featured sponsor="kontagent" %}">Kontagent</a> •
+    <a href="{% url sponsor_featured sponsor="rackspace" %}">Rackspace</a>
+</p>
+
 <h3>{% trans "Our Sponsors" %}</h3>
-<p><a href="{% url sponsor_prospectus %}">Learn how to become a sponsor &raquo;</a></p>
 
 <div class="container-fluid" id="sponsors">
     {% sponsor_levels as levels %}
