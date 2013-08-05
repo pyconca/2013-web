@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-02 17:18-0400\n"
+"POT-Creation-Date: 2013-08-05 12:17-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -811,6 +811,10 @@ msgstr "Soumettre une demande de commandite"
 msgid "Sponsorship"
 msgstr "Commanditer"
 
-#: templates/sponsorship/list.html:7 templates/sponsorship/list.html.py:12
+#: templates/sponsorship/list.html:7 templates/sponsorship/list.html.py:20
 msgid "Our Sponsors"
 msgstr "Nos commanditaires"
+
+#: templates/sponsorship/list.html:12
+msgid "Sponsor Q &amp; A"
+msgstr ""
