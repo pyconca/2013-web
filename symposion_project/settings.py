@@ -104,7 +104,7 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.transaction.TransactionMiddleware",
     "reversion.middleware.RevisionMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    #"debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ugettext = lambda s: s
@@ -153,7 +153,7 @@ INSTALLED_APPS = [
     "django_forms_bootstrap",
 
     # external
-    "debug_toolbar",
+    #"debug_toolbar",
     "mailer",
     "timezones",
     "metron",
