@@ -10,6 +10,8 @@ admin.autodiscover()
 
 import symposion.views
 
+from symposion_project.views import redirect_to_mobile_guide
+
 # from pinax.apps.account.openid_consumer import PinaxConsumer
 
 WIKI_SLUG = r"(([\w-]{2,})(/[\w-]{2,})*)"
@@ -72,6 +74,7 @@ urlpatterns += i18n_patterns("",
     url(r"^markitup/", include("markitup.urls")),
 
     url(r"^su/", include("django_switchuser.urls")),
+    url(r"^m/?", redirect_to_mobile_guide),
 )
 
 
