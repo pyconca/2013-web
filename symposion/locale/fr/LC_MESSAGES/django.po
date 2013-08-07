@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-05 12:17-0400\n"
+"POT-Creation-Date: 2013-08-06 22:10-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -676,22 +676,22 @@ msgstr ""
 msgid "Conference Schedule"
 msgstr "Horaire de la conférence"
 
-#: templates/schedule/schedule_conference.html:19
+#: templates/schedule/schedule_conference.html:23
 msgid "Friday August 9"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:20
+#: templates/schedule/schedule_conference.html:24
 msgid ""
 "07:00PM–11:30PM: Registration and casual mixer. Come register, hang out, and "
 "meet other PyCon-goers! Food and drinks will be provided courtesy of <a href="
 "\"http://upverter.com/\">Upverter</a>, and the venue bar will be open!"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:33
+#: templates/schedule/schedule_conference.html:37
 msgid "PyLadies Social"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:34
+#: templates/schedule/schedule_conference.html:38
 msgid ""
 "<p>Come join <a href=\"http://www.pyladies.com/\">PyLadies</a> for a social "
 "evening on Saturday, August 10th from 9pm–12am at <a href=\"http://cafe.art-"
@@ -699,30 +699,30 @@ msgid ""
 "\"http://goo.gl/maps/wDUia\">short walk</a> from the PyCon Venue.</p>"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:35
+#: templates/schedule/schedule_conference.html:39
 msgid ""
 "<p>We’ll have appetizers and sangria available for attendees. A huge thank "
 "you to <a href=\"https://www.heroku.com/\">Heroku</a> and PyCon Canada for "
 "sponsoring and organizing this event!</p>"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:36
+#: templates/schedule/schedule_conference.html:40
 msgid ""
 "<p>Women conference attendees and their plus one (of either gender) are "
 "welcome.</p>"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:37
+#: templates/schedule/schedule_conference.html:41
 msgid ""
 "<p><a href=\"http://pyladies-at-pyconca.eventbrite.com/\">Register for the "
 "PyLadies Social at Art Square »</a></p>"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:47
+#: templates/schedule/schedule_conference.html:51
 msgid "Young Coders Workshop — Saturday August 10 and Sunday August 11"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:48
+#: templates/schedule/schedule_conference.html:52
 msgid ""
 "Learn how to remix and create your own websites, videos, and more with "
 "Mozilla's Webmaker tools at PyCon Canada's <a href=\"http://www.eventbrite."
@@ -732,40 +732,40 @@ msgid ""
 "video-editing tool <a href=\"https://webmaker.org/tools\">Popcorn Maker</a>:"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:57
+#: templates/schedule/schedule_conference.html:61
 msgid "And did we mention it's free?! Just register via <a href=\\"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:58
+#: templates/schedule/schedule_conference.html:62
 msgid ""
 "Youth will be able to make, create, and collaborate at this learning lab. "
 "Using a project-based approach, youth will learn through making with the "
 "help of some awesome mentors!"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:60
+#: templates/schedule/schedule_conference.html:64
 msgid "Sprints — Monday August 12"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:62
 #: templates/schedule/schedule_conference.html:66
+#: templates/schedule/schedule_conference.html:70
 #, python-format
 msgid "<a href=\"%(sprints_url)s\">Development Sprints</a>"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:64
+#: templates/schedule/schedule_conference.html:68
 msgid "SPRINT_WHAT"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:65
+#: templates/schedule/schedule_conference.html:69
 msgid "Sprints — Tuesday August 13"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:72
+#: templates/schedule/schedule_conference.html:76
 msgid "Toronto PyCamp"
 msgstr ""
 
-#: templates/schedule/schedule_conference.html:73
+#: templates/schedule/schedule_conference.html:77
 msgid ""
 "<p><a href=\"http://trizpug.org/boot-camp/torpy13/\">Toronto PyCamp</a>: "
 "Monday through Friday, August 12-16, 2013</p><p>PyCamp teams with the second "
