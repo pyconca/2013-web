@@ -6365,12 +6365,24 @@ span.speaker a {
     text-align: center;
     font-size: 2em !important;
     margin-bottom: 2em;
+}
 
 /* Mobile schedule */
+
+.mobile-schedule-link .hey-text {
+    display: none;
+}
+
 div.fake-table {
     display: none;
 }
+
 @media (max-width: 767px) {
+  .mobile-schedule-link .hey-text {
+      display: inline;
+      font-weight: bold;
+  }
+
   table.calendar {
     display: none;
   }
