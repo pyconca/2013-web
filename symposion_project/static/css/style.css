@@ -6377,10 +6377,14 @@ div.fake-table {
     display: none;
 }
 
+.talk-meta-phone {
+    display: none;
+}
+
 @media (max-width: 767px) {
   .mobile-schedule-link .hey-text {
-      display: inline;
-      font-weight: bold;
+    display: inline;
+    font-weight: bold;
   }
 
   table.calendar {
