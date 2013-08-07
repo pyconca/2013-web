@@ -39,35 +39,7 @@
                 <td class="time">{{ row.time|date:"h:iA" }}</td>
                 {% for slot in row.slots %}
                     <td class="slot slot-{{ slot.kind.label }}" colspan="{{ slot.colspan }}" rowspan="{{ slot.rowspan }}">
-                        {% if slot.kind.is_normal %}
-                            {% if not slot.content %}
-                            {% else %}
-                                <span class="title">
-                                    <a href="{% url schedule_presentation_detail slot.content.pk %}">{{ slot.content.title }}</a>
-                                </span><br />
-                                <span class="speaker">
-                                    {% for speaker in slot.content.speakers %}
-                                    <a href="{% url speaker_profile speaker.pk %}">{{ speaker }}</a>{% if not forloop.last %},{% endif %}
-                                    {% endfor %}
-                                </span>
-                            {% endif %}
-                        {% else %}
-                            {% if slot.content_override.raw %}
-                                {{ slot.content_override.rendered|safe }}
-                            {% else %}
-                                {{ slot.kind.label }}
-                            {% endif %}
-                        {% endif %}
-                        {% if slot.content.pk == 36 %}
-                            <br /><a href="https://github.com/pyconca/2013-wiki/wiki/Tutorials#notable-features-of-python">Sign up &raquo;</a>
-                        {% elif slot.content.pk == 47 %}
-                            <br /><a href="https://github.com/pyconca/2013-wiki/wiki/Tutorials#fundamentals-of-python-debugging">Sign up &raquo;</a>
-                        {% elif slot.content.pk == 27 %}
-                            <br /><a href="https://github.com/pyconca/2013-wiki/wiki/Tutorials#dissecting-memory-mysteries-of-python">Sign up &raquo;</a>
-                        {% elif slot.content.pk == 23 %}
-                            <br /><a href="https://github.com/pyconca/2013-wiki/wiki/Tutorials#sass-me-up-scotty">Sign up &raquo;</a>
-                        {% endif %}
-                        <div class="talk-meta-phone">in {{ slot.rooms }}</div>
+                      {% include "schedule/_slot.html" %}
                     </td>
                 {% endfor %}
                 {% if forloop.last %}
@@ -85,7 +57,7 @@
 		<div class="fake-td fake-cell">{{ row.time|date:"h:iA" }}</div>
 		{% for slot in row.slots %}
 		    <div class="fake-td fake-cell slot slot-{{ slot.kind.label }}">
-			{% include "schedule/_slot.html" %}
+          {% include "schedule/_slot.html" %}
 		    </div>
 		{% endfor %}
 	    </div>
