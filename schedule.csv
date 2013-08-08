@@ -20,8 +20,10 @@ Saturday,12:25,5,break 15,,,,,
 Saturday,12:30,10,,break 10,,,,
 Saturday,12:40,20,"L89: K. Marhubi: 250GB of RAM for $0.34¢/hour: EC2 spot instances
 L44: C. Lambacher: Making Embeddable Web Widgets Without Iframes
-L33: J. Bergstra: Hyperopt: A Python library for optimizing the hyperparameters of machine learning algorithms ",B32: Swift: Saturday Morning BreakfastSerial: Hacking Arduinos in Python,,,,
-Saturday,13:00,90,lunch (seating),,,lunch (buffet),,
+L33: J. Bergstra: Hyperopt: A Python library for optimizing the hyperparameters of machine learning algorithms ","B32: Swift: Saturday Morning BreakfastSerial: Hacking Arduinos in Python
+
+# Runner: start this talk 5 minutes late to stagger lunch (ie, so these attendees get to lunch a bit late)",,,,
+Saturday,13:00,90,lunch (seating),# Volunteers: walk through the lunch room encouraging people who are finished to clear out and visit the sponsors,,lunch (buffet),,
 Saturday,14:30,20,A99: L. Root: PRISM-AS-A-SERVICE: Not Subject to American Law,B62: S. Law: Communicating Sequential Processes: Multicore Programs in Standard CPython,T47:170 C. Calloway: Fundamentals of Python Debugging,,,
 Saturday,14:50,5,,break 5,,,,
 Saturday,14:55,15,,"B34: J. Saryerwinnie: Supporting Everything - Python2/3, Mac/Linux/Windows",,,,
@@ -36,7 +38,7 @@ Saturday,17:00,20,"L26: S. Iyer: Open source circuit simulator in Python
 L72: D. Latornell: Bloomcast - Python Facilitating Operational Oceanography
 L86: A. Dubrau: A 65-Year-Old Map Nobody Has Ever Seen",B19: D. Scott: A Flask of full-text search with PostgreSQL,,,,
 Saturday,17:20,10,break 10,break 10,break 10,,,
-Saturday,17:30,45,K106: Opening keynote (Hilary Mason),,,,,
+Saturday,17:30,45,K106: Keynote (Hilary Mason),,,,,
 Saturday,18:15,15,M:15 Closing Messages,,,,,
 Saturday,18:30,,SEEYA,,,,,
 ,,,,,,,,
@@ -47,7 +49,7 @@ Sunday,8:30,75,,,,Breakfast,Registration,Sponsor setup
 Sunday,9:45,25,M:25 Morning Messages,,,,,
 Sunday,10:10,45,K105: Keynote (Karen Brennan),,,,,
 Sunday,10:55,10,break 10,break 10,break 10,,,Sponsor + coffee
-Sunday,11:05,20,A98: A. Gaynor: Why Open Source Works,B42: V. Sabino: Exploring the Google Analytics API,X:100 Open Space,,,
+Sunday,11:05,20,A98: A. Gaynor: Why Open Source Works,B42: V. Sabino: Exploring the Google Analytics API,X:100 Open space,,,
 Sunday,11:25,5,,break 5,,,,
 Sunday,11:30,15,,B11: C. Hawco: Python and Hadoop: Big Data Application Development with PyCascading,,,,
 Sunday,11:45,5,break 15,,,,,
@@ -59,7 +61,7 @@ L90: H. David: Pyramid-Royal: building restful web services the easy way
 L108: V. Ganesh: Introduction to Security Testing with SAT Solvers",,,,
 Sunday,12:40,5,break 5,,,,,
 Sunday,12:45,90,lunch (seating),,,lunch (buffet),,
-Sunday,14:15,20,A107: D. Bauer: ,B50: D. Callahan: Quick Wins for Better Website Security,"T23:170 R. Vazquez: SASS me up, Scotty",,,
+Sunday,14:15,20,A107: D. Bauer: The Red Balloon: Lessons on Community Building from the Public Lab,B50: D. Callahan: Quick Wins for Better Website Security,"T23:170 R. Vazquez: SASS me up, Scotty",,,
 Sunday,14:35,5,,break 5,,,,
 Sunday,14:40,15,,B49: Y. Gingras: An Overview of the Facebook cache,,,,
 Sunday,14:55,5,break 15,,,,,
@@ -74,7 +76,7 @@ Sunday,16:35,10,break 10,break 10,,,,
 Sunday,16:45,20,B45: A. Strong: Lessons Learned in Teaching Python,B85: A. Christopher: Testing Django Projects at Scale,,,,
 Sunday,17:05,10,break 10,break 10,break 40,,,
 Sunday,17:15,20,B101: G. Ward: Go for Python Hackers,"L109: D. Moniz: How to Learn Python in Five Minutes
-L??:
+L110: J. Barca: playSVG: scripting vector graphics with geometry
 L??:",,,,
 Sunday,17:35,10,break 10,break 10,,,,
 Sunday,17:45,35,M:35 Closing Ceremonies,,,,,
