@@ -191,6 +191,7 @@ def schedule_json(request):
                     Site.objects.get_current().domain,
                     reverse("schedule_presentation_detail", args=[slot.content.pk])
                 ),
+                "video_url": slot.content.video_url,
                 "kind": slot.kind.label,
                 "tags": "",
             }

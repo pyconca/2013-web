@@ -9,6 +9,11 @@
             <a href="{% url speaker_profile speaker.pk %}">{{ speaker }}</a>{% if not forloop.last %},{% endif %}
             {% endfor %}
         </span>
+        {% if slot.content.video_url %}
+            <br /><span class="video">
+                <em><a href="{{ slot.content.video_url }}">video</a></em>
+            </span>
+        {% endif %}
     {% endif %}
 {% else %}
     {% if slot.content_override.raw %}

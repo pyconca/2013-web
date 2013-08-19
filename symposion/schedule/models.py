@@ -161,6 +161,7 @@ class Presentation(models.Model):
     cancelled = models.BooleanField(default=False)
     proposal_base = models.OneToOneField(ProposalBase, related_name="presentation")
     section = models.ForeignKey(Section, related_name="presentations")
+    video_url = models.CharField(null=True, max_length=100)
     
     @property
     def number(self):
