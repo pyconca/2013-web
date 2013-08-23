@@ -9,8 +9,16 @@
             <a href="{% url speaker_profile speaker.pk %}">{{ speaker }}</a>{% if not forloop.last %},{% endif %}
             {% endfor %}
         </span>
+        {% if slot.content.video_url or slot.content.pyvideo_url %}
+            <br />
+        {% endif %}
+        {% if slot.content.pyvideo_url %}
+            <span class="pyvideo">
+                <em><a href="{{ slot.content.pyvideo_url }}">pyvideo</a></em>
+            </span>
+        {% endif %}
         {% if slot.content.video_url %}
-            <br /><span class="video">
+            <span class="video">
                 <em><a href="{{ slot.content.video_url }}">video</a></em>
             </span>
         {% endif %}
