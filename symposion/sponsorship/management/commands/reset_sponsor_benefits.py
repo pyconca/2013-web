@@ -1,8 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from django.contrib.auth.models import Group
-
-from symposion.sponsorship.models import Sponsor, SponsorBenefit
+from symposion.sponsorship.models import Sponsor, SponsorBenefit, SponsorLevel
 
 
 class Command(BaseCommand):
