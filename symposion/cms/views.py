@@ -3,8 +3,8 @@ from django.db import transaction
 from django.http import Http404, HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import static
-
 from django.contrib.auth.decorators import login_required
+
 from .models import Page, File
 from .forms import PageForm, FileUploadForm
 
@@ -89,7 +89,7 @@ def file_create(request):
     if request.method == "POST":
         form = FileUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            with transaction.commit_on_success():
+            with transaction.atomic():
                 kwargs = {
                     "file": form.cleaned_data["file"],
                 }
