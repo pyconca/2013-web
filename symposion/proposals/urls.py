@@ -1,5 +1,4 @@
-from django.conf.urls.defaults import *
-
+from django.conf.urls import url, patterns
 
 urlpatterns = patterns("symposion.proposals.views",
     url(r"^submit/$", "proposal_submit", name="proposal_submit"),
