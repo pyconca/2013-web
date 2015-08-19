@@ -1,4 +1,6 @@
+import json
 from django.http import Http404
+from django.http.response import HttpResponse
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template import RequestContext
 
@@ -77,3 +79,40 @@ def sponsor_detail(request, pk):
         "form": form,
         "formset": formset,
     }, context_instance=RequestContext(request))
+
+
+def sponsor_featured(request, sponsor):
+    if sponsor not in ["500px", "chango", "kontagent", "rackspace"]:
+        raise Http404()
+    return render_to_response(
+        "featured_sponsors/{}.html".format(sponsor),
+        {},
+        context_instance=RequestContext(request)
+    )
+
+
+def sponsors_json(request):
+    sponsors = []
+    for sponsor in Sponsor.objects.filter(active=True):
+        try:
+            sponsor_desc = sponsor.sponsor_benefits.get(active=True, benefit_id=4)
+        except SponsorBenefit.DoesNotExist:
+            sponsor_desc = None
+        try:
+            sponsor_logo = sponsor.sponsor_benefits.get(active=True, benefit_id=2)
+        except SponsorBenefit.DoesNotExist:
+            sponsor_logo = None
+        sponsors.append({
+            "id": sponsor.id,
+            "name": sponsor.name,
+            "level": sponsor.level.name,
+            "website": sponsor.external_url,
+            "description": sponsor_desc.text if sponsor_desc else None,
+            "logo": request.build_absolute_uri(sponsor_logo.upload.url)
+                if sponsor_logo and sponsor_logo.upload else None
+        })
+
+    return HttpResponse(
+        json.dumps({"sponsors": sponsors}),
+        content_type="application/json"
+    )
